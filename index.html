@@ -613,7 +613,7 @@
     els.scanRoot.textContent = 'workMCP · статический снимок';
     els.scanRoot.title = 'Статический снимок данных локального дашборда';
     const snapshotIso = data.snapshot_at || data.generated_at;
-    els.snapshotDate.textContent = fmtClock(snapshotIso);
+    els.snapshotDate.textContent = fullDate(snapshotIso) || '—';
     els.snapshotDate.title = fullDate(snapshotIso);
     els.lastUpdated.textContent = fmtClock(data.generated_at);
     els.lastUpdated.title = fullDate(data.generated_at);
