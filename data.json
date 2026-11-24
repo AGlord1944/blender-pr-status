@@ -319,17 +319,19 @@
       "status_source": "override",
       "has_blend": true,
       "has_png": true,
-      "blend_mtime": "2026-11-25T02:52:11+03:00",
-      "blend_mtime_ts": 1795564331.7113523,
+      "blend_mtime": "2026-11-25T02:53:57+03:00",
+      "blend_mtime_ts": 1795564437.1202903,
       "png_mtime": "2026-11-25T02:52:19+03:00",
       "png_mtime_ts": 1795564339.93057,
-      "png_newer": true,
+      "png_newer": false,
       "preview_url": "previews/t5_pr2_candle.png",
       "note": "Переделка после FAIL.",
       "agent": "builder-candle",
-      "warnings": [],
+      "warnings": [
+        "png_older"
+      ],
       "png_size": 692486,
-      "blend_size": 1315947
+      "blend_size": 1319153
     }
   ],
   "warnings": [],
@@ -358,7 +360,7 @@
     "orphan_pngs": [],
     "unmatched_status_keys": []
   },
-  "generated_at": "2026-11-25T02:53:51+03:00",
-  "snapshot_at": "2026-11-25T02:53:51+03:00",
-  "content_hash": "2ab35922db75663d72845bd3cd7ba3ed6e974ba3748fae483cbc093a8c1cb74f"
+  "generated_at": "2026-11-25T02:54:05+03:00",
+  "snapshot_at": "2026-11-25T02:54:05+03:00",
+  "content_hash": "a6fe2fa19ddfee46a2af629485971f83563bbd5349b282d611f5eb3784706dde"
 }
