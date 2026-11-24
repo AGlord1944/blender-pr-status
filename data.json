@@ -251,17 +251,19 @@
       "status_source": "override",
       "has_blend": true,
       "has_png": true,
-      "blend_mtime": "2026-11-25T02:46:04+03:00",
-      "blend_mtime_ts": 1795563964.2302463,
-      "png_mtime": "2026-11-25T02:46:23+03:00",
-      "png_mtime_ts": 1795563983.9984448,
+      "blend_mtime": "2026-11-25T02:54:07+03:00",
+      "blend_mtime_ts": 1795564447.4831305,
+      "png_mtime": "2026-11-25T02:54:15+03:00",
+      "png_mtime_ts": 1795564455.804083,
       "png_newer": true,
       "preview_url": "previews/t5_pr1_candlestick.png",
       "note": "В работе, ожидает проверки.",
       "agent": null,
-      "warnings": [],
-      "png_size": 826531,
-      "blend_size": 119105
+      "warnings": [
+        "blend1"
+      ],
+      "png_size": 837393,
+      "blend_size": 119108
     },
     {
       "id": "T5_PR1_CAT",
@@ -281,9 +283,7 @@
       "preview_url": "previews/t5_pr1_cat.png",
       "note": "В работе, ожидает проверки.",
       "agent": null,
-      "warnings": [
-        "blend1"
-      ],
+      "warnings": [],
       "png_size": 988492,
       "blend_size": 110343
     },
@@ -321,16 +321,14 @@
       "has_png": true,
       "blend_mtime": "2026-11-25T02:53:57+03:00",
       "blend_mtime_ts": 1795564437.1202903,
-      "png_mtime": "2026-11-25T02:52:19+03:00",
-      "png_mtime_ts": 1795564339.93057,
-      "png_newer": false,
+      "png_mtime": "2026-11-25T02:54:06+03:00",
+      "png_mtime_ts": 1795564446.0136302,
+      "png_newer": true,
       "preview_url": "previews/t5_pr2_candle.png",
       "note": "Переделка после FAIL.",
       "agent": "builder-candle",
-      "warnings": [
-        "png_older"
-      ],
-      "png_size": 692486,
+      "warnings": [],
+      "png_size": 688710,
       "blend_size": 1319153
     }
   ],
@@ -360,7 +358,7 @@
     "orphan_pngs": [],
     "unmatched_status_keys": []
   },
-  "generated_at": "2026-11-25T02:54:05+03:00",
-  "snapshot_at": "2026-11-25T02:54:05+03:00",
-  "content_hash": "a6fe2fa19ddfee46a2af629485971f83563bbd5349b282d611f5eb3784706dde"
+  "generated_at": "2026-11-25T02:54:17+03:00",
+  "snapshot_at": "2026-11-25T02:54:17+03:00",
+  "content_hash": "71a6dd2ee3a5699675231a8e3bd69413b32fa777e3a5c56aa091ceec33af5c05"
 }
