@@ -347,6 +347,14 @@
         "reason": "текстура/ассет, а не рендер работы"
       },
       {
+        "path": "Тема 5/_chk_base.png",
+        "reason": "служебный файл (имя начинается с _)"
+      },
+      {
+        "path": "Тема 5/_chk_wick.png",
+        "reason": "служебный файл (имя начинается с _)"
+      },
+      {
         "path": "Тема 5/_preview_final.png",
         "reason": "служебный файл (имя начинается с _)"
       }
@@ -358,7 +366,7 @@
     "orphan_pngs": [],
     "unmatched_status_keys": []
   },
-  "generated_at": "2026-11-25T02:54:17+03:00",
-  "snapshot_at": "2026-11-25T02:54:17+03:00",
-  "content_hash": "71a6dd2ee3a5699675231a8e3bd69413b32fa777e3a5c56aa091ceec33af5c05"
+  "generated_at": "2026-11-25T02:54:35+03:00",
+  "snapshot_at": "2026-11-25T02:54:35+03:00",
+  "content_hash": "9429c4077534c68a8c3fb15547f39dee550b7cb36ed8d8f988faf53abf878410"
 }
