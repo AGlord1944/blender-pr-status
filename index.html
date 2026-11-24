@@ -1,0 +1,1007 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="color-scheme" content="dark">
+<title>Blender PR Status — workMCP</title>
+<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'%3E%3Crect width='32' height='32' rx='8' fill='%23ea7a2b'/%3E%3Cpath d='M16 6.5 25 11v10l-9 4.5L7 21V11l9-4.5Z' fill='none' stroke='%230d1117' stroke-width='1.8' stroke-linejoin='round'/%3E%3Cpath d='m7.3 11.2 8.7 4.4 8.7-4.4M16 15.6v9.4' fill='none' stroke='%230d1117' stroke-width='1.8' stroke-linejoin='round'/%3E%3C/svg%3E">
+<style>
+  :root{
+    color-scheme: dark;
+    --bg:#0b0f14;
+    --bg-soft:#0f151c;
+    --card:#141b24;
+    --card-2:#111820;
+    --border:#233040;
+    --border-strong:#33455b;
+    --text:#e6edf3;
+    --muted:#8b98a9;
+    --faint:#5f6f83;
+    --accent:#f08a3c;
+    --accent-soft:rgba(240,138,60,.12);
+    --blue:#58a6ff;
+    --done:#3fb950;
+    --done-bg:rgba(63,185,80,.12);
+    --prog:#d29922;
+    --prog-bg:rgba(210,153,34,.12);
+    --fail:#f85149;
+    --fail-bg:rgba(248,81,73,.12);
+    --miss:#8b949e;
+    --miss-bg:rgba(139,148,158,.12);
+    --radius:14px;
+    --mono:"Cascadia Code","Consolas",ui-monospace,SFMono-Regular,Menlo,monospace;
+  }
+  *{box-sizing:border-box}
+  html{scroll-behavior:smooth}
+  body{
+    margin:0;
+    min-height:100vh;
+    font-family:"Segoe UI Variable","Segoe UI",system-ui,-apple-system,Arial,sans-serif;
+    font-size:14px;
+    line-height:1.5;
+    color:var(--text);
+    background:
+      radial-gradient(1100px 560px at 8% -12%, rgba(240,138,60,.10), transparent 62%),
+      radial-gradient(900px 520px at 96% -4%, rgba(88,166,255,.07), transparent 60%),
+      var(--bg);
+    background-attachment:fixed;
+  }
+  button,select,input{font:inherit}
+  button{color:inherit}
+  a{color:var(--blue)}
+  :focus-visible{outline:2px solid var(--accent);outline-offset:2px;border-radius:4px}
+  .wrap{width:100%;max-width:1560px;margin:0 auto;padding:0 28px}
+
+  /* ---------------------------------------------------------------- header */
+  .topbar{
+    position:sticky;top:0;z-index:20;
+    background:rgba(11,15,20,.82);
+    -webkit-backdrop-filter:blur(16px);backdrop-filter:blur(16px);
+    border-bottom:1px solid var(--border);
+  }
+  .topbar-inner{display:flex;align-items:center;justify-content:space-between;gap:20px;flex-wrap:wrap;padding:13px 0}
+  .brand{display:flex;align-items:center;gap:13px;min-width:0}
+  .logo{
+    width:42px;height:42px;flex:0 0 auto;border-radius:12px;
+    display:grid;place-items:center;
+    background:linear-gradient(145deg,#f59b4f,#c25b17);
+    box-shadow:0 6px 22px rgba(240,138,60,.28), inset 0 1px 0 rgba(255,255,255,.25);
+  }
+  .logo svg{width:25px;height:25px;color:#14100c}
+  h1{margin:0;font-size:17px;line-height:1.2;letter-spacing:.2px;font-weight:650}
+  .brand-sub{
+    margin:3px 0 0;font-size:11.5px;color:var(--muted);
+    white-space:nowrap;overflow:hidden;text-overflow:ellipsis;max-width:56vw;
+  }
+  .top-meta{display:flex;align-items:center;gap:16px;flex-wrap:wrap}
+  .live{display:inline-flex;align-items:center;gap:7px;font-size:12px;color:var(--muted)}
+  .dot{width:8px;height:8px;border-radius:50%;background:var(--miss);transition:background .2s}
+  .dot.ok{background:var(--done);animation:pulse 2.4s ease-out infinite}
+  .dot.warn{background:var(--prog)}
+  .dot.err{background:var(--fail)}
+  .dot.snapshot{background:var(--blue);box-shadow:0 0 0 3px rgba(88,166,255,.14)}
+  @keyframes pulse{
+    0%{box-shadow:0 0 0 0 rgba(63,185,80,.38)}
+    70%{box-shadow:0 0 0 7px rgba(63,185,80,0)}
+    100%{box-shadow:0 0 0 0 rgba(63,185,80,0)}
+  }
+  .updated{font-size:12px;color:var(--muted)}
+  .updated strong{color:var(--text);font-weight:600;font-variant-numeric:tabular-nums}
+  .btn{
+    display:inline-flex;align-items:center;gap:7px;
+    padding:7px 12px;border-radius:8px;cursor:pointer;
+    border:1px solid var(--border-strong);background:#151d27;color:#d7e2ee;
+    font-size:12px;transition:background .15s,border-color .15s,transform .15s;
+  }
+  .btn:hover{background:#1b2632;border-color:#48617d}
+  .btn:active{transform:translateY(1px)}
+  .btn svg{width:13px;height:13px}
+  .btn.is-busy{opacity:.6}
+
+  /* --------------------------------------------------------------- summary */
+  .summary{
+    margin:24px 0 18px;padding:18px;
+    display:grid;grid-template-columns:minmax(0,1.35fr) minmax(300px,.65fr);gap:24px;
+    background:linear-gradient(180deg,rgba(24,32,42,.92),rgba(16,22,29,.92));
+    border:1px solid var(--border);border-radius:var(--radius);
+    box-shadow:0 16px 40px rgba(0,0,0,.18);
+  }
+  .stats{display:grid;grid-template-columns:repeat(5,minmax(0,1fr));gap:10px}
+  .stat{
+    position:relative;overflow:hidden;
+    padding:12px 13px 11px;border-radius:10px;
+    background:#0e141b;border:1px solid var(--border);
+  }
+  .stat::before{content:"";position:absolute;left:0;top:0;bottom:0;width:3px;background:var(--c,var(--accent))}
+  .stat b{display:block;font-size:26px;line-height:1.05;font-variant-numeric:tabular-nums;letter-spacing:-.02em}
+  .stat span{display:block;margin-top:5px;font-size:10px;letter-spacing:.11em;text-transform:uppercase;color:var(--muted)}
+  .stat.total{--c:var(--accent)}
+  .stat.done{--c:var(--done)}
+  .stat.in_progress{--c:var(--prog)}
+  .stat.failed{--c:var(--fail)}
+  .stat.missing{--c:var(--miss)}
+  .progress-box{display:flex;flex-direction:column;justify-content:center;gap:9px;min-width:0}
+  .progress-head{display:flex;align-items:baseline;justify-content:space-between;gap:12px}
+  .progress-head > span{font-size:11px;letter-spacing:.1em;text-transform:uppercase;color:var(--muted)}
+  .progress-head b{font-size:15px;font-variant-numeric:tabular-nums;font-weight:650;white-space:nowrap}
+  .bar{
+    display:flex;width:100%;height:12px;border-radius:999px;overflow:hidden;
+    background:#090d12;border:1px solid #1c2733;
+  }
+  .bar i{display:block;height:100%;transition:width .5s ease}
+  .legend{display:flex;flex-wrap:wrap;gap:6px 14px;font-size:11px;color:var(--muted)}
+  .legend span{display:inline-flex;align-items:center;gap:6px;white-space:nowrap}
+  .legend i{width:8px;height:8px;border-radius:2px;background:var(--c,var(--miss))}
+  .auto-note{font-size:10.5px;color:var(--faint)}
+
+  /* ---------------------------------------------------------------- banner */
+  .banner{
+    display:flex;align-items:flex-start;gap:9px;
+    margin:0 0 16px;padding:10px 14px;border-radius:10px;
+    background:rgba(248,81,73,.08);border:1px solid rgba(248,81,73,.30);
+    color:#ffb4ae;font-size:12.5px;
+  }
+  .banner[hidden]{display:none}
+  .banner.warn{background:rgba(210,153,34,.09);border-color:rgba(210,153,34,.32);color:#e8c15a}
+  .banner strong{font-weight:650}
+  .banner.snapshot{
+    background:rgba(88,166,255,.08);border-color:rgba(88,166,255,.30);color:#a9cdf5;
+  }
+  .banner.snapshot strong{color:#d6e8fb}
+
+  /* --------------------------------------------------------------- filters */
+  .controls{
+    display:flex;align-items:center;justify-content:space-between;gap:16px;flex-wrap:wrap;
+    margin:0 0 22px;padding:11px 14px;
+    background:rgba(20,27,36,.72);border:1px solid var(--border);border-radius:12px;
+  }
+  .control-group{display:flex;align-items:center;gap:10px;flex-wrap:wrap;min-width:0}
+  .control-label{font-size:10px;letter-spacing:.12em;text-transform:uppercase;color:var(--faint);white-space:nowrap}
+  select{
+    appearance:auto;
+    padding:6px 10px;border-radius:8px;border:1px solid var(--border-strong);
+    background:#0f161e;color:var(--text);font-size:12px;cursor:pointer;max-width:240px;
+  }
+  select:hover{border-color:#48617d}
+  .chips{display:flex;align-items:center;gap:6px;flex-wrap:wrap}
+  .chipbtn{
+    --chip-c:var(--miss);--chip-bg:var(--miss-bg);
+    display:inline-flex;align-items:center;gap:6px;
+    padding:5px 10px;border-radius:999px;cursor:pointer;
+    border:1px solid var(--border);background:#0f161e;color:var(--muted);
+    font-size:11px;line-height:1.4;transition:background .15s,border-color .15s,color .15s;
+    white-space:nowrap;
+  }
+  .chipbtn:hover{color:var(--text);border-color:var(--border-strong)}
+  .chipbtn i{width:6px;height:6px;border-radius:50%;background:var(--chip-c);flex:0 0 auto}
+  .chipbtn b{font-weight:650;color:#d8e2ed;font-variant-numeric:tabular-nums}
+  .chipbtn[aria-pressed="true"]{
+    background:var(--chip-bg);border-color:var(--chip-c);color:var(--text);
+    box-shadow:inset 0 0 0 1px rgba(255,255,255,.03);
+  }
+  .chipbtn.all{--chip-c:var(--accent);--chip-bg:var(--accent-soft)}
+  .chipbtn.done{--chip-c:var(--done);--chip-bg:var(--done-bg)}
+  .chipbtn.in_progress{--chip-c:var(--prog);--chip-bg:var(--prog-bg)}
+  .chipbtn.failed{--chip-c:var(--fail);--chip-bg:var(--fail-bg)}
+  .chipbtn.missing{--chip-c:var(--miss);--chip-bg:var(--miss-bg)}
+  .visible-count{font-size:11.5px;color:var(--faint);font-variant-numeric:tabular-nums;margin-left:auto}
+
+  /* ----------------------------------------------------------------- board */
+  #board[aria-busy="true"]{opacity:.6;transition:opacity .2s}
+  .theme{margin:0 0 30px}
+  .theme-head{display:flex;align-items:center;gap:12px;margin:0 0 13px;padding-bottom:9px;border-bottom:1px solid var(--border)}
+  .theme-head h2{margin:0;font-size:15px;font-weight:650;letter-spacing:.2px;display:flex;align-items:center;gap:9px;min-width:0}
+  .theme-head h2::before{content:"";width:7px;height:7px;border-radius:2px;background:var(--accent);box-shadow:0 0 10px rgba(240,138,60,.5);flex:0 0 auto}
+  .theme-count{margin-left:auto;font-size:11.5px;color:var(--muted);white-space:nowrap;font-variant-numeric:tabular-nums}
+  .mini-bar{width:104px;height:4px;border-radius:99px;background:#1b2531;overflow:hidden;flex:0 0 auto}
+  .mini-bar i{display:block;height:100%;background:var(--done);border-radius:99px;transition:width .4s}
+  .grid{display:grid;grid-template-columns:repeat(auto-fill,minmax(312px,1fr));gap:16px}
+
+  /* ------------------------------------------------------------------ card */
+  .card{
+    --status-c:var(--miss);--status-bg:var(--miss-bg);
+    position:relative;min-width:0;
+    display:flex;flex-direction:column;gap:11px;
+    padding:14px;border-radius:12px;
+    background:linear-gradient(180deg,#151d27,#111820);
+    border:1px solid var(--border);border-left:3px solid var(--status-c);
+    transition:transform .18s ease,border-color .18s ease,box-shadow .18s ease;
+  }
+  .card:hover{transform:translateY(-2px);border-color:var(--border-strong);border-left-color:var(--status-c);box-shadow:0 14px 32px rgba(0,0,0,.30)}
+  .card[data-status="done"]{--status-c:var(--done);--status-bg:var(--done-bg)}
+  .card[data-status="in_progress"]{--status-c:var(--prog);--status-bg:var(--prog-bg)}
+  .card[data-status="failed"]{--status-c:var(--fail);--status-bg:var(--fail-bg)}
+  .card[data-status="missing"]{--status-c:var(--miss);--status-bg:var(--miss-bg)}
+  .card-top{display:flex;align-items:center;justify-content:space-between;gap:8px;min-width:0}
+  .id-wrap{display:flex;align-items:center;gap:6px;min-width:0}
+  .card-id{
+    font-family:var(--mono);font-size:11px;font-weight:700;letter-spacing:.05em;color:var(--accent);
+    white-space:nowrap;overflow:hidden;text-overflow:ellipsis;
+  }
+  .manual{
+    font-size:9px;letter-spacing:.04em;color:#9fb0c3;border:1px solid #33465c;
+    border-radius:4px;padding:0 4px;line-height:15px;text-transform:lowercase;flex:0 0 auto;
+  }
+  .badge{
+    display:inline-flex;align-items:center;gap:5px;flex:0 0 auto;
+    padding:3px 8px;border-radius:999px;
+    background:var(--status-bg);color:var(--status-c);
+    font-size:9.5px;font-weight:750;letter-spacing:.07em;white-space:nowrap;
+  }
+  .bdot{width:5px;height:5px;border-radius:50%;background:currentColor}
+  .card-title{margin:0;font-size:14px;line-height:1.35;font-weight:600;word-break:break-word;color:#dde7f1}
+  .preview{
+    position:relative;display:block;width:100%;aspect-ratio:16/10;padding:0;overflow:hidden;
+    border-radius:9px;border:1px solid #1c2733;background:#070b10;cursor:zoom-in;
+  }
+  .preview img{width:100%;height:100%;object-fit:cover;display:block;transition:transform .35s ease}
+  .preview:hover img{transform:scale(1.025)}
+  .preview.empty{cursor:default;display:grid;place-items:center}
+  .preview:disabled{cursor:default}
+  .preview-empty{display:flex;flex-direction:column;align-items:center;gap:7px;color:var(--faint);font-size:11.5px;padding:14px;text-align:center}
+  .preview-empty svg{width:34px;height:34px;opacity:.45}
+  .time-chip{
+    position:absolute;left:8px;bottom:8px;
+    padding:3px 7px;border-radius:6px;
+    background:rgba(5,8,12,.80);-webkit-backdrop-filter:blur(6px);backdrop-filter:blur(6px);
+    border:1px solid rgba(255,255,255,.08);
+    font-size:10px;color:#c9d4e1;font-variant-numeric:tabular-nums;letter-spacing:.01em;
+  }
+  .zoom-hint{
+    position:absolute;right:8px;top:8px;width:26px;height:26px;border-radius:7px;
+    display:grid;place-items:center;background:rgba(5,8,12,.72);border:1px solid rgba(255,255,255,.10);
+    color:#cfdae6;opacity:0;transition:opacity .18s;
+  }
+  .preview:hover .zoom-hint,.preview:focus-visible .zoom-hint{opacity:1}
+  .zoom-hint svg{width:14px;height:14px}
+  .warnrow{display:flex;flex-wrap:wrap;gap:6px}
+  .wchip{
+    font-size:10px;line-height:1.5;padding:1px 7px;border-radius:5px;
+    background:rgba(210,153,34,.10);color:#e0b64a;border:1px solid rgba(210,153,34,.24);
+  }
+  .wchip.danger{background:var(--fail-bg);color:#ff8f88;border-color:rgba(248,81,73,.28)}
+  .meta{display:grid;gap:3px;font-size:11px}
+  .meta-row{display:flex;align-items:baseline;justify-content:space-between;gap:12px;color:var(--muted);min-width:0}
+  .mlabel{flex:0 0 auto;color:var(--faint)}
+  .mval{text-align:right;font-variant-numeric:tabular-nums;color:#b9c7d6;min-width:0;overflow-wrap:anywhere}
+  .mval .rel{color:var(--muted)}
+  .note{
+    padding:8px 10px;border-radius:7px;
+    background:#0d141b;border:1px solid #1d2835;border-left:2px solid var(--accent);
+  }
+  .note-label{font-size:9px;letter-spacing:.13em;text-transform:uppercase;color:var(--faint);margin-bottom:2px}
+  .note p{margin:0;font-size:12px;line-height:1.5;color:#c8d4e1;overflow-wrap:anywhere}
+  .agent{display:flex;align-items:center;gap:7px;font-size:10.5px;color:var(--muted);margin-top:-2px}
+  .agent b{color:#c3d0de;font-weight:600}
+  .avatar{
+    width:18px;height:18px;border-radius:50%;flex:0 0 auto;display:grid;place-items:center;
+    background:linear-gradient(135deg,#3b82f6,#8b5cf6);color:#fff;font-size:8.5px;font-weight:700;
+  }
+
+  .empty-state{
+    padding:54px 20px;text-align:center;color:var(--muted);font-size:13px;
+    border:1px dashed var(--border);border-radius:var(--radius);background:rgba(17,24,32,.4);
+  }
+  .empty-state b{display:block;color:#cbd7e4;font-size:14px;margin-bottom:4px}
+
+  /* ------------------------------------------------------------- diagnostics */
+  .diag{
+    margin:4px 0 34px;border:1px solid var(--border);border-radius:10px;
+    background:rgba(15,21,28,.6);font-size:12px;
+  }
+  .diag summary{
+    cursor:pointer;padding:10px 14px;color:var(--muted);user-select:none;
+    list-style:none;display:flex;align-items:center;gap:8px;
+  }
+  .diag summary::-webkit-details-marker{display:none}
+  .diag summary::before{content:"▸";color:var(--faint);transition:transform .15s;display:inline-block}
+  .diag[open] summary::before{transform:rotate(90deg)}
+  .diag[open] summary{border-bottom:1px solid var(--border);color:#b9c6d4}
+  .diag-body{padding:12px 14px 14px;display:grid;gap:7px}
+  .diag-row{display:grid;grid-template-columns:126px minmax(0,1fr);gap:12px;align-items:start}
+  .diag-key{color:var(--faint);font-size:11px}
+  .diag-row code{font-family:var(--mono);font-size:11px;color:#b6c4d3;overflow-wrap:anywhere}
+  .diag h4{margin:9px 0 1px;font-size:10px;letter-spacing:.1em;text-transform:uppercase;color:var(--faint);font-weight:650}
+  .diag ul{margin:0;padding-left:17px;color:#a9b7c6;display:grid;gap:2px}
+  .diag li{overflow-wrap:anywhere}
+  .diag-danger{color:#ff8f88!important}
+  .diag-empty{margin:2px 0;color:var(--faint)}
+
+  /* ------------------------------------------------------------------ foot */
+  .foot{padding:0 28px 30px;color:var(--faint);font-size:11px;display:flex;justify-content:space-between;gap:14px;flex-wrap:wrap}
+  .foot span{display:inline-flex;align-items:center;gap:6px}
+
+  /* --------------------------------------------------------------- lightbox */
+  dialog{
+    padding:0;border:1px solid var(--border-strong);border-radius:14px;
+    background:#0a0f15;color:var(--text);max-width:min(96vw,1400px);
+    box-shadow:0 30px 100px rgba(0,0,0,.75);
+  }
+  dialog::backdrop{background:rgba(3,6,10,.82);-webkit-backdrop-filter:blur(3px);backdrop-filter:blur(3px)}
+  .lightbox-inner{position:relative;display:flex;flex-direction:column;max-height:92vh}
+  .lightbox-img{display:block;max-width:92vw;max-height:80vh;width:auto;height:auto;object-fit:contain;background:#000}
+  .lightbox-cap{padding:10px 14px;border-top:1px solid var(--border);font-size:11.5px;color:var(--muted);display:flex;justify-content:space-between;gap:16px;flex-wrap:wrap}
+  .lightbox-cap b{color:#cbd8e6;font-weight:600}
+  .lightbox-close{
+    position:absolute;top:10px;right:10px;z-index:2;width:34px;height:34px;border-radius:50%;
+    border:1px solid rgba(255,255,255,.16);background:rgba(7,11,16,.78);color:#fff;
+    cursor:pointer;font-size:19px;line-height:1;display:grid;place-items:center;
+  }
+  .lightbox-close:hover{background:rgba(30,40,52,.95)}
+
+  @media (max-width:1040px){
+    .summary{grid-template-columns:1fr}
+    .stats{grid-template-columns:repeat(5,minmax(0,1fr))}
+    .brand-sub{max-width:70vw}
+  }
+  @media (max-width:760px){
+    .wrap{padding:0 16px}
+    .foot{padding:0 16px 26px}
+    .stats{grid-template-columns:repeat(3,minmax(0,1fr))}
+    .stat b{font-size:22px}
+    .grid{grid-template-columns:1fr}
+    .visible-count{margin-left:0}
+    .topbar-inner{padding:11px 0}
+    .brand-sub{max-width:60vw}
+  }
+  @media (max-width:460px){
+    .stats{grid-template-columns:repeat(2,minmax(0,1fr))}
+    .stat.total{grid-column:span 2}
+    .top-meta{gap:10px;width:100%;justify-content:space-between}
+    .brand-sub{max-width:78vw}
+  }
+  @media (prefers-reduced-motion:reduce){
+    *,*::before,*::after{animation:none!important;transition:none!important}
+    html{scroll-behavior:auto}
+  }
+</style>
+</head>
+<body>
+
+<header class="topbar">
+  <div class="wrap topbar-inner">
+    <div class="brand">
+      <div class="logo" aria-hidden="true">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linejoin="round">
+          <path d="M12 2.8 21 7.5v9L12 21.2 3 16.5v-9L12 2.8Z"/>
+          <path d="m3.3 7.6 8.7 4.6 8.7-4.6M12 12.2v8.6"/>
+        </svg>
+      </div>
+      <div>
+        <h1>Blender PR Status</h1>
+        <p class="brand-sub" id="scanRoot">workMCP · мониторинг практических работ</p>
+      </div>
+    </div>
+    <div class="top-meta">
+      <div class="live"><span class="dot snapshot" id="liveDot"></span><span id="liveText">snapshot</span></div>
+      <div class="updated">обновлено <strong id="lastUpdated">—</strong></div>
+      <button class="btn" id="refreshBtn" type="button" title="Обновить сейчас">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" aria-hidden="true">
+          <path d="M20 11a8 8 0 1 0-2.3 5.7"/><path d="M20 4v7h-7"/>
+        </svg>
+        Обновить
+      </button>
+    </div>
+  </div>
+</header>
+
+<main class="wrap">
+  <div class="banner snapshot" role="status">
+    <span aria-hidden="true">◆</span>
+    <span>Статический снимок от <strong id="snapshotDate">—</strong>. Локальная версия обновляется в реальном времени.</span>
+  </div>
+
+  <section class="summary" aria-label="Сводка">
+    <div class="stats" id="stats" aria-live="polite"></div>
+    <div class="progress-box">
+      <div class="progress-head"><span>Прогресс</span><b id="progressPct">0 / 0 · 0%</b></div>
+      <div class="bar" id="progressBar" role="progressbar" aria-label="Готовность работ" aria-valuemin="0" aria-valuemax="100" aria-valuenow="0"></div>
+      <div class="legend" id="legend"></div>
+      <div class="auto-note">статический снимок · публикатор обновляет его раз в 3 минуты</div>
+    </div>
+  </section>
+
+  <div class="banner" id="errorBanner" role="alert" hidden>
+    <span aria-hidden="true">●</span><span id="bannerText"></span>
+  </div>
+
+  <section class="controls" aria-label="Фильтры">
+    <label class="control-group">
+      <span class="control-label">Тема</span>
+      <select id="themeFilter"><option value="all">Все темы</option></select>
+    </label>
+    <div class="control-group" role="group" aria-label="Фильтр по статусу">
+      <span class="control-label">Статус</span>
+      <div class="chips" id="statusFilters"></div>
+    </div>
+    <span class="visible-count" id="visibleCount"></span>
+  </section>
+
+  <div id="board" aria-live="off">
+    <div class="empty-state"><b>Загрузка…</b>Читаю статусы из workMCP</div>
+  </div>
+
+  <details class="diag" id="diag">
+    <summary id="diagSummary">Диагностика сканирования</summary>
+    <div class="diag-body" id="diagBody"></div>
+  </details>
+</main>
+
+<footer class="wrap foot">
+  <span>Статическая копия · GitHub Pages · без внешних зависимостей</span>
+  <span>Локальный дашборд обновляется в реальном времени</span>
+</footer>
+
+<dialog id="lightbox" aria-label="Просмотр рендера">
+  <div class="lightbox-inner">
+    <button class="lightbox-close" id="lightboxClose" type="button" aria-label="Закрыть">×</button>
+    <img class="lightbox-img" id="lightboxImg" alt="">
+    <div class="lightbox-cap"><span id="lightboxCap"></span><span id="lightboxSub"></span></div>
+  </div>
+</dialog>
+
+<noscript>
+  <div class="wrap"><div class="banner">Для работы дашборда нужен JavaScript.</div></div>
+</noscript>
+
+<script>
+(() => {
+  'use strict';
+
+  const STATUS_ORDER = ['done', 'in_progress', 'failed', 'missing'];
+  const STATUS_META = {
+    done: { label: 'DONE', ru: 'готово', color: 'var(--done)' },
+    in_progress: { label: 'IN PROGRESS', ru: 'в работе', color: 'var(--prog)' },
+    failed: { label: 'FAILED', ru: 'провал', color: 'var(--fail)' },
+    missing: { label: 'MISSING', ru: 'нет файлов', color: 'var(--miss)' }
+  };
+  const WARN_META = {
+    blend1: { text: 'есть .blend1', danger: false },
+    temp_preview: { text: 'временный preview', danger: false },
+    no_png: { text: 'PNG не найден', danger: false },
+    png_older: { text: 'PNG старее .blend', danger: false },
+    png_without_blend: { text: 'PNG без .blend', danger: true },
+    no_files: { text: 'нет .blend и .png', danger: true }
+  };
+  const CUBE_SVG = '<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.4" stroke-linejoin="round" aria-hidden="true"><path d="M12 2.8 21 7.5v9L12 21.2 3 16.5v-9L12 2.8Z"/><path d="m3.3 7.6 8.7 4.6 8.7-4.6M12 12.2v8.6"/></svg>';
+  const ZOOM_SVG = '<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" aria-hidden="true"><circle cx="11" cy="11" r="6.5"/><path d="m16 16 4.2 4.2M11 8.2v5.6M8.2 11h5.6"/></svg>';
+
+  const dtFmt = new Intl.DateTimeFormat('ru-RU', { day: '2-digit', month: '2-digit', year: 'numeric', hour: '2-digit', minute: '2-digit' });
+  const shortFmt = new Intl.DateTimeFormat('ru-RU', { day: '2-digit', month: '2-digit', hour: '2-digit', minute: '2-digit' });
+  const clockFmt = new Intl.DateTimeFormat('ru-RU', { hour: '2-digit', minute: '2-digit', second: '2-digit' });
+  const clockDateFmt = new Intl.DateTimeFormat('ru-RU', { day: '2-digit', month: '2-digit', hour: '2-digit', minute: '2-digit', second: '2-digit' });
+  const rtf = new Intl.RelativeTimeFormat('ru', { numeric: 'auto' });
+
+  const state = {
+    data: null,
+    signature: '',
+    theme: 'all',
+    status: 'all',
+    inFlight: false,
+    offline: false,
+    dataWarnings: [],
+    lastOkAt: null
+  };
+
+  const $ = (id) => document.getElementById(id);
+  const els = {
+    stats: $('stats'),
+    progressPct: $('progressPct'),
+    progressBar: $('progressBar'),
+    legend: $('legend'),
+    banner: $('errorBanner'),
+    bannerText: $('bannerText'),
+    themeFilter: $('themeFilter'),
+    statusFilters: $('statusFilters'),
+    visibleCount: $('visibleCount'),
+    board: $('board'),
+    scanRoot: $('scanRoot'),
+    liveDot: $('liveDot'),
+    liveText: $('liveText'),
+    lastUpdated: $('lastUpdated'),
+    refreshBtn: $('refreshBtn'),
+    diag: $('diag'),
+    diagSummary: $('diagSummary'),
+    diagBody: $('diagBody'),
+    lightbox: $('lightbox'),
+    lightboxImg: $('lightboxImg'),
+    lightboxCap: $('lightboxCap'),
+    lightboxSub: $('lightboxSub'),
+    lightboxClose: $('lightboxClose'),
+    snapshotDate: $('snapshotDate')
+  };
+
+  // -------------------------------------------------------------- utilities
+  function el(tag, cls, text) {
+    const node = document.createElement(tag);
+    if (cls) node.className = cls;
+    if (text !== undefined && text !== null) node.textContent = text;
+    return node;
+  }
+
+  function fmtTs(ts) {
+    if (ts === null || ts === undefined) return '—';
+    const date = new Date(ts * 1000);
+    if (Number.isNaN(date.getTime())) return '—';
+    return dtFmt.format(date);
+  }
+
+  function fmtShort(ts) {
+    if (ts === null || ts === undefined) return '—';
+    const date = new Date(ts * 1000);
+    if (Number.isNaN(date.getTime())) return '—';
+    return shortFmt.format(date);
+  }
+
+  function relTime(ts) {
+    if (ts === null || ts === undefined) return '';
+    const seconds = Number(ts);
+    if (!Number.isFinite(seconds)) return '';
+    const diff = Math.floor(Date.now() / 1000 - seconds);
+    if (diff < 45) return 'только что';
+    if (diff < 3600) return rtf.format(-Math.max(1, Math.round(diff / 60)), 'minute');
+    if (diff < 86400) return rtf.format(-Math.round(diff / 3600), 'hour');
+    if (diff < 86400 * 45) return rtf.format(-Math.round(diff / 86400), 'day');
+    return rtf.format(-Math.round(diff / (86400 * 30)), 'month');
+  }
+
+  function formatBytes(bytes) {
+    if (bytes === null || bytes === undefined) return '—';
+    const value = Number(bytes);
+    if (!Number.isFinite(value)) return '—';
+    if (value < 1024) return value + ' Б';
+    const units = ['КБ', 'МБ', 'ГБ'];
+    let size = value / 1024;
+    let index = 0;
+    while (size >= 1024 && index < units.length - 1) {
+      size /= 1024;
+      index += 1;
+    }
+    return size.toFixed(size >= 10 ? 0 : 1).replace('.', ',') + ' ' + units[index];
+  }
+
+  function fmtClock(iso) {
+    if (!iso) return '—';
+    const date = new Date(iso);
+    if (Number.isNaN(date.getTime())) return '—';
+    const now = new Date();
+    const sameDay = date.getFullYear() === now.getFullYear() && date.getMonth() === now.getMonth() && date.getDate() === now.getDate();
+    return sameDay ? clockFmt.format(date) : clockDateFmt.format(date);
+  }
+
+  function fullDate(iso) {
+    if (!iso) return '';
+    const date = new Date(iso);
+    if (Number.isNaN(date.getTime())) return '';
+    return date.toLocaleString('ru-RU');
+  }
+
+  function signatureOf(data) {
+    const copy = Object.assign({}, data);
+    delete copy.generated_at;
+    return JSON.stringify(copy);
+  }
+
+  // ------------------------------------------------------------------ fetch
+  async function loadStatus() {
+    if (state.inFlight) return;
+    state.inFlight = true;
+    els.refreshBtn.classList.add('is-busy');
+    try {
+      const response = await fetch('data.json', { cache: 'no-store', headers: { Accept: 'application/json' } });
+      if (!response.ok) throw new Error('HTTP ' + response.status);
+      const data = await response.json();
+      if (!data || !Array.isArray(data.works)) throw new Error('Неожиданный формат ответа');
+      state.offline = false;
+      state.lastOkAt = Date.now();
+      applyData(data);
+    } catch (error) {
+      state.offline = true;
+      state.lastOkAt = null;
+    } finally {
+      state.inFlight = false;
+      els.refreshBtn.classList.remove('is-busy');
+      updateConnection();
+    }
+  }
+
+  function applyData(data) {
+    state.data = data;
+    state.dataWarnings = Array.isArray(data.warnings) ? data.warnings.filter(Boolean) : [];
+
+    els.scanRoot.textContent = 'workMCP · статический снимок';
+    els.scanRoot.title = 'Статический снимок данных локального дашборда';
+    const snapshotIso = data.snapshot_at || data.generated_at;
+    els.snapshotDate.textContent = fmtClock(snapshotIso);
+    els.snapshotDate.title = fullDate(snapshotIso);
+    els.lastUpdated.textContent = fmtClock(data.generated_at);
+    els.lastUpdated.title = fullDate(data.generated_at);
+
+    const signature = signatureOf(data);
+    if (signature !== state.signature) {
+      state.signature = signature;
+      renderAll(data);
+    }
+  }
+
+  function updateConnection() {
+    if (state.offline) {
+      els.liveDot.className = 'dot err';
+      els.liveText.textContent = 'нет data.json';
+    } else {
+      els.liveDot.className = 'dot snapshot';
+      els.liveText.textContent = 'snapshot';
+    }
+
+    if (state.offline) {
+      els.banner.hidden = false;
+      els.banner.className = 'banner';
+      els.bannerText.textContent = 'Не удалось загрузить data.json. Проверьте, что файл опубликован рядом с index.html.';
+    } else if (state.dataWarnings.length) {
+      els.banner.hidden = false;
+      els.banner.className = 'banner warn';
+      els.bannerText.textContent = state.dataWarnings.join(' · ');
+    } else {
+      els.banner.hidden = true;
+    }
+  }
+
+  // ---------------------------------------------------------------- rendering
+  function renderAll(data) {
+    renderSummary(data);
+    renderThemeOptions(data);
+    renderStatusFilters(data);
+    renderBoard();
+    renderDiagnostics(data);
+  }
+
+  function renderSummary(data) {
+    const summary = data.summary || {};
+    const defs = [
+      { key: 'total', label: 'всего', value: Number(summary.total) || 0 },
+      { key: 'done', label: 'DONE', value: Number(summary.done) || 0 },
+      { key: 'in_progress', label: 'IN PROGRESS', value: Number(summary.in_progress) || 0 },
+      { key: 'failed', label: 'FAILED', value: Number(summary.failed) || 0 },
+      { key: 'missing', label: 'MISSING', value: Number(summary.missing) || 0 }
+    ];
+    els.stats.replaceChildren();
+    for (const def of defs) {
+      const card = el('div', 'stat ' + def.key);
+      card.append(el('b', null, String(def.value)), el('span', null, def.label));
+      els.stats.append(card);
+    }
+
+    const total = Number(summary.total) || 0;
+    const done = Number(summary.done) || 0;
+    const percent = total ? Math.round((done * 100) / total) : 0;
+    els.progressPct.textContent = total ? done + ' / ' + total + ' · ' + percent + '%' : '0 / 0 · 0%';
+    els.progressBar.replaceChildren();
+    els.progressBar.setAttribute('aria-valuenow', String(percent));
+    if (total) {
+      for (const key of STATUS_ORDER) {
+        const value = Number(summary[key]) || 0;
+        if (!value) continue;
+        const segment = el('i');
+        segment.style.width = (value / total * 100) + '%';
+        segment.style.background = STATUS_META[key].color;
+        segment.title = STATUS_META[key].label + ': ' + value;
+        els.progressBar.append(segment);
+      }
+    }
+
+    els.legend.replaceChildren();
+    for (const key of STATUS_ORDER) {
+      const item = el('span');
+      item.style.setProperty('--c', STATUS_META[key].color);
+      item.append(el('i'), document.createTextNode(STATUS_META[key].label + ' ' + (Number(summary[key]) || 0)));
+      els.legend.append(item);
+    }
+  }
+
+  function renderThemeOptions(data) {
+    const themes = Array.isArray(data.themes) ? data.themes : [];
+    const total = Number(data.summary && data.summary.total) || 0;
+    const options = [new Option('Все темы (' + total + ')', 'all')];
+    for (const theme of themes) {
+      options.push(new Option(theme.name + ' (' + theme.total + ')', theme.name));
+    }
+    els.themeFilter.replaceChildren(...options);
+    const exists = state.theme === 'all' || themes.some((theme) => theme.name === state.theme);
+    if (!exists) state.theme = 'all';
+    els.themeFilter.value = state.theme;
+  }
+
+  function renderStatusFilters(data) {
+    const summary = data.summary || {};
+    const items = [{ key: 'all', label: 'Все', count: Number(summary.total) || 0, cls: 'all' }];
+    for (const key of STATUS_ORDER) {
+      items.push({ key, label: STATUS_META[key].label, count: Number(summary[key]) || 0, cls: key });
+    }
+    els.statusFilters.replaceChildren();
+    for (const item of items) {
+      const button = el('button', 'chipbtn ' + item.cls);
+      button.type = 'button';
+      button.setAttribute('aria-pressed', String(state.status === item.key));
+      button.append(el('i'), document.createTextNode(item.label), el('b', null, String(item.count)));
+      button.addEventListener('click', () => {
+        state.status = item.key;
+        renderStatusFilters(state.data || data);
+        renderBoard();
+      });
+      els.statusFilters.append(button);
+    }
+  }
+
+  function matchesFilters(work) {
+    if (state.theme !== 'all' && work.theme !== state.theme) return false;
+    if (state.status !== 'all' && work.status !== state.status) return false;
+    return true;
+  }
+
+  function renderBoard() {
+    const data = state.data;
+    if (!data) return;
+    els.board.setAttribute('aria-busy', 'true');
+
+    const allWorks = Array.isArray(data.works) ? data.works : [];
+    const visible = allWorks.filter(matchesFilters);
+    const groups = new Map();
+    for (const work of visible) {
+      if (!groups.has(work.theme)) groups.set(work.theme, []);
+      groups.get(work.theme).push(work);
+    }
+
+    const ordered = [];
+    for (const theme of (Array.isArray(data.themes) ? data.themes : [])) {
+      if (groups.has(theme.name)) {
+        ordered.push([theme.name, groups.get(theme.name)]);
+        groups.delete(theme.name);
+      }
+    }
+    for (const entry of groups.entries()) ordered.push(entry);
+
+    els.board.replaceChildren();
+    if (!visible.length) {
+      const empty = el('div', 'empty-state');
+      const filtered = state.theme !== 'all' || state.status !== 'all';
+      empty.append(
+        el('b', null, filtered ? 'Ничего не найдено' : 'Работы не найдены'),
+        document.createTextNode(filtered ? 'Попробуйте изменить фильтры.' : 'Проверьте папку workMCP и повторите обновление.')
+      );
+      els.board.append(empty);
+    } else {
+      for (const [themeName, works] of ordered) {
+        els.board.append(buildThemeSection(themeName, works));
+      }
+    }
+
+    els.visibleCount.textContent = 'Показано ' + visible.length + ' из ' + allWorks.length;
+    els.board.setAttribute('aria-busy', 'false');
+  }
+
+  function buildThemeSection(themeName, works) {
+    const section = el('section', 'theme');
+    const head = el('div', 'theme-head');
+    const title = el('h2', null, themeName);
+    const done = works.filter((work) => work.status === 'done').length;
+    const count = el('span', 'theme-count', 'готово ' + done + ' / ' + works.length);
+    const bar = el('div', 'mini-bar');
+    const fill = el('i');
+    fill.style.width = (works.length ? (done / works.length) * 100 : 0) + '%';
+    bar.append(fill);
+    head.append(title, count, bar);
+
+    const grid = el('div', 'grid');
+    for (const work of works) grid.append(buildCard(work));
+    section.append(head, grid);
+    return section;
+  }
+
+  function buildCard(work) {
+    const card = el('article', 'card');
+    card.dataset.status = work.status;
+
+    const top = el('div', 'card-top');
+    const idWrap = el('div', 'id-wrap');
+    const id = el('span', 'card-id', work.id);
+    if (work.full_id && work.full_id !== work.id) id.title = 'Файл: ' + work.full_id;
+    idWrap.append(id);
+    if (work.status_source === 'override') {
+      const manual = el('span', 'manual', 'ручной');
+      manual.title = 'Статус и заметка заданы в status.json';
+      idWrap.append(manual);
+    }
+    const statusMeta = STATUS_META[work.status] || STATUS_META.missing;
+    const badge = el('span', 'badge');
+    badge.append(el('i', 'bdot'), document.createTextNode(statusMeta.label));
+    badge.title = statusMeta.ru + (work.status_source === 'override' ? ' · вручную из status.json' : ' · вычислено по файлам');
+    top.append(idWrap, badge);
+
+    const title = el('h3', 'card-title', work.name);
+    const preview = buildPreview(work);
+
+    card.append(top, title, preview);
+
+    const warnings = (Array.isArray(work.warnings) ? work.warnings : [])
+      .map((key) => ({ key, meta: WARN_META[key] }))
+      .filter((entry) => entry.meta);
+    if (warnings.length) {
+      const row = el('div', 'warnrow');
+      for (const entry of warnings) {
+        const chip = el('span', 'wchip' + (entry.meta.danger ? ' danger' : ''), entry.meta.text);
+        row.append(chip);
+      }
+      card.append(row);
+    }
+
+    const meta = el('div', 'meta');
+    meta.append(metaRow('Рендер', work.png_mtime_ts, work.png_size));
+    meta.append(metaRow('Blend', work.blend_mtime_ts, work.blend_size));
+    card.append(meta);
+
+    if (work.note) {
+      const note = el('div', 'note');
+      note.append(el('div', 'note-label', 'Заметка'), el('p', null, work.note));
+      card.append(note);
+    }
+
+    if (work.agent) {
+      const agent = el('div', 'agent');
+      const initial = Array.from(work.agent.trim())[0] || '?';
+      agent.append(el('span', 'avatar', initial.toUpperCase()));
+      const text = el('span');
+      text.append(document.createTextNode('агент · '), el('b', null, work.agent));
+      agent.append(text);
+      card.append(agent);
+    }
+
+    return card;
+  }
+
+  function metaRow(label, ts, size) {
+    const row = el('div', 'meta-row');
+    row.append(el('span', 'mlabel', label));
+    const value = el('span', 'mval');
+    if (ts === null || ts === undefined) {
+      value.textContent = '—';
+    } else {
+      value.append(document.createTextNode(fmtTs(ts)));
+      const rel = el('span', 'rel', relTime(ts));
+      rel.dataset.ts = String(ts);
+      value.append(document.createTextNode(' · '), rel);
+      if (size !== null && size !== undefined) {
+        value.append(document.createTextNode(' · ' + formatBytes(size)));
+      }
+    }
+    row.append(value);
+    return row;
+  }
+
+  function buildPreview(work) {
+    if (!work.preview_url) {
+      const empty = el('div', 'preview empty');
+      empty.append(emptyPreview(work.has_blend ? 'PNG ещё не отрендерен' : 'Файлы не найдены'));
+      return empty;
+    }
+
+    const button = el('button', 'preview');
+    button.type = 'button';
+    button.setAttribute('aria-label', 'Открыть рендер: ' + work.name);
+
+    const image = document.createElement('img');
+    image.loading = 'lazy';
+    image.decoding = 'async';
+    image.alt = 'Рендер ' + work.id + ': ' + work.name;
+    image.src = work.preview_url;
+
+    const time = el('span', 'time-chip', fmtShort(work.png_mtime_ts));
+    time.title = 'Время рендера: ' + fmtTs(work.png_mtime_ts);
+
+    const zoom = el('span', 'zoom-hint');
+    zoom.innerHTML = ZOOM_SVG;
+
+    image.addEventListener('error', () => {
+      button.disabled = true;
+      button.classList.add('empty');
+      button.replaceChildren(emptyPreview('PNG не открывается'));
+    });
+    button.addEventListener('click', () => openLightbox(work));
+    button.append(image, time, zoom);
+    return button;
+  }
+
+  function emptyPreview(text) {
+    const box = el('div', 'preview-empty');
+    const icon = el('span');
+    icon.innerHTML = CUBE_SVG;
+    box.append(icon, el('span', null, text));
+    return box;
+  }
+
+  // -------------------------------------------------------------- diagnostics
+  function renderDiagnostics(data) {
+    const diagnostics = data.diagnostics || {};
+    const ignored = Array.isArray(diagnostics.ignored_files) ? diagnostics.ignored_files : [];
+    const temp = Array.isArray(diagnostics.temp_previews) ? diagnostics.temp_previews : [];
+    const problems = Array.isArray(diagnostics.problems) ? diagnostics.problems : [];
+    const unmatched = Array.isArray(diagnostics.unmatched_status_keys) ? diagnostics.unmatched_status_keys : [];
+    const backups = Array.isArray(diagnostics.blend_backups) ? diagnostics.blend_backups : [];
+    const orphans = Array.isArray(diagnostics.orphan_pngs) ? diagnostics.orphan_pngs : [];
+    const issueCount = ignored.length + temp.length + problems.length + unmatched.length;
+
+    els.diagSummary.textContent = 'Диагностика сканирования' + (issueCount ? ' · ' + issueCount : '');
+    els.diagBody.replaceChildren();
+
+    appendDiagRow(els.diagBody, 'workMCP', diagnostics.workmcp || '—');
+    appendDiagRow(els.diagBody, 'status.json', diagnostics.status_file || 'не найден (необязателен)');
+    if (diagnostics.status_updated_at) appendDiagRow(els.diagBody, 'updated_at', diagnostics.status_updated_at);
+    if (diagnostics.scan_error) appendDiagRow(els.diagBody, 'Ошибка', diagnostics.scan_error, true);
+    if (diagnostics.status_error) appendDiagRow(els.diagBody, 'Ошибка JSON', diagnostics.status_error, true);
+    if (problems.length) appendDiagList(els.diagBody, 'Предупреждения', problems);
+    if (temp.length) appendDiagList(els.diagBody, 'Временные preview', temp);
+    if (ignored.length) appendDiagList(els.diagBody, 'Служебные и игнорируемые файлы', ignored.map((item) => item.path + ' — ' + item.reason));
+    if (orphans.length) appendDiagList(els.diagBody, 'PNG без .blend', orphans);
+    if (backups.length) appendDiagList(els.diagBody, 'Резервные копии .blend1', backups);
+    if (unmatched.length) appendDiagList(els.diagBody, 'Неизвестные ключи status.json', unmatched);
+
+    if (!ignored.length && !temp.length && !problems.length && !unmatched.length && !diagnostics.scan_error && !diagnostics.status_error) {
+      els.diagBody.append(el('p', 'diag-empty', 'Служебных файлов и ошибок не найдено.'));
+    }
+    if (diagnostics.scan_error || diagnostics.status_error) els.diag.open = true;
+  }
+
+  function appendDiagRow(container, label, value, danger) {
+    const row = el('div', 'diag-row');
+    row.append(el('span', 'diag-key', label));
+    row.append(el('code', danger ? 'diag-danger' : '', value));
+    container.append(row);
+  }
+
+  function appendDiagList(container, title, items) {
+    container.append(el('h4', null, title));
+    const list = el('ul');
+    for (const item of items) list.append(el('li', null, item));
+    container.append(list);
+  }
+
+  // ---------------------------------------------------------------- lightbox
+  function openLightbox(work) {
+    if (!work.preview_url) return;
+    els.lightboxImg.src = work.preview_url;
+    els.lightboxImg.alt = 'Рендер ' + work.id + ': ' + work.name;
+    els.lightboxCap.textContent = work.id + ' · ' + work.name;
+    const parts = [];
+    if (work.png_mtime_ts) parts.push('рендер ' + fmtTs(work.png_mtime_ts));
+    if (work.png_size) parts.push(formatBytes(work.png_size));
+    els.lightboxSub.textContent = parts.join(' · ');
+    if (typeof els.lightbox.showModal === 'function') {
+      if (!els.lightbox.open) els.lightbox.showModal();
+    } else {
+      els.lightbox.setAttribute('open', '');
+    }
+  }
+
+  // -------------------------------------------------------------------- init
+  function init() {
+    els.refreshBtn.addEventListener('click', loadStatus);
+    els.themeFilter.addEventListener('change', () => {
+      state.theme = els.themeFilter.value;
+      renderBoard();
+    });
+    els.lightboxClose.addEventListener('click', () => els.lightbox.close());
+    els.lightbox.addEventListener('click', (event) => {
+      if (event.target === els.lightbox) els.lightbox.close();
+    });
+    document.addEventListener('visibilitychange', () => {
+      if (!document.hidden) loadStatus();
+    });
+
+    loadStatus();
+  }
+
+  init();
+})();
+</script>
+</body>
+</html>
