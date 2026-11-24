@@ -251,19 +251,17 @@
       "status_source": "override",
       "has_blend": true,
       "has_png": true,
-      "blend_mtime": "2026-11-25T02:54:07+03:00",
-      "blend_mtime_ts": 1795564447.4831305,
-      "png_mtime": "2026-11-25T02:54:15+03:00",
-      "png_mtime_ts": 1795564455.804083,
+      "blend_mtime": "2026-11-25T02:54:56+03:00",
+      "blend_mtime_ts": 1795564496.549329,
+      "png_mtime": "2026-11-25T02:55:04+03:00",
+      "png_mtime_ts": 1795564504.994207,
       "png_newer": true,
       "preview_url": "previews/t5_pr1_candlestick.png",
       "note": "В работе, ожидает проверки.",
       "agent": null,
-      "warnings": [
-        "blend1"
-      ],
-      "png_size": 837393,
-      "blend_size": 119108
+      "warnings": [],
+      "png_size": 836271,
+      "blend_size": 119145
     },
     {
       "id": "T5_PR1_CAT",
@@ -345,18 +343,6 @@
       {
         "path": "Тема 4/lemon_slice_texture.png",
         "reason": "текстура/ассет, а не рендер работы"
-      },
-      {
-        "path": "Тема 5/_chk_base.png",
-        "reason": "служебный файл (имя начинается с _)"
-      },
-      {
-        "path": "Тема 5/_chk_wick.png",
-        "reason": "служебный файл (имя начинается с _)"
-      },
-      {
-        "path": "Тема 5/_preview_final.png",
-        "reason": "служебный файл (имя начинается с _)"
       }
     ],
     "temp_previews": [
@@ -366,7 +352,7 @@
     "orphan_pngs": [],
     "unmatched_status_keys": []
   },
-  "generated_at": "2026-11-25T02:54:35+03:00",
-  "snapshot_at": "2026-11-25T02:54:35+03:00",
-  "content_hash": "9429c4077534c68a8c3fb15547f39dee550b7cb36ed8d8f988faf53abf878410"
+  "generated_at": "2026-11-25T02:56:02+03:00",
+  "snapshot_at": "2026-11-25T02:56:02+03:00",
+  "content_hash": "55fc862c313d217a475ca5f0dee446d2c5d8da3840fff19f0e98e7a8c9a6191e"
 }
