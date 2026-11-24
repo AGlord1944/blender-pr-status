@@ -275,17 +275,16 @@
       "has_png": true,
       "blend_mtime": "2026-11-25T02:52:56+03:00",
       "blend_mtime_ts": 1795564376.1567144,
-      "png_mtime": "2026-11-25T02:50:49+03:00",
-      "png_mtime_ts": 1795564249.2603934,
-      "png_newer": false,
+      "png_mtime": "2026-11-25T02:53:19+03:00",
+      "png_mtime_ts": 1795564399.7924187,
+      "png_newer": true,
       "preview_url": "previews/t5_pr1_cat.png",
       "note": "В работе, ожидает проверки.",
       "agent": null,
       "warnings": [
-        "png_older",
         "blend1"
       ],
-      "png_size": 990550,
+      "png_size": 988492,
       "blend_size": 110343
     },
     {
@@ -346,6 +345,10 @@
       {
         "path": "Тема 4/lemon_slice_texture.png",
         "reason": "текстура/ассет, а не рендер работы"
+      },
+      {
+        "path": "Тема 5/_preview_final.png",
+        "reason": "служебный файл (имя начинается с _)"
       }
     ],
     "temp_previews": [
@@ -355,7 +358,7 @@
     "orphan_pngs": [],
     "unmatched_status_keys": []
   },
-  "generated_at": "2026-11-25T02:53:20+03:00",
-  "snapshot_at": "2026-11-25T02:53:20+03:00",
-  "content_hash": "51f3d0815824bdf600aeccf0fe8ee474c4a546ecbc21cd531ccf7d0931b8deb1"
+  "generated_at": "2026-11-25T02:53:51+03:00",
+  "snapshot_at": "2026-11-25T02:53:51+03:00",
+  "content_hash": "2ab35922db75663d72845bd3cd7ba3ed6e974ba3748fae483cbc093a8c1cb74f"
 }
