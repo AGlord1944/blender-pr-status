@@ -371,8 +371,8 @@
       "status_source": "override",
       "has_blend": true,
       "has_png": false,
-      "blend_mtime": "2026-11-25T04:50:25+03:00",
-      "blend_mtime_ts": 1795571425.384295,
+      "blend_mtime": "2026-11-25T04:53:50+03:00",
+      "blend_mtime_ts": 1795571630.4299405,
       "png_mtime": null,
       "png_mtime_ts": null,
       "png_newer": null,
@@ -383,7 +383,7 @@
         "no_png"
       ],
       "png_size": null,
-      "blend_size": 264911
+      "blend_size": 264605
     },
     {
       "id": "T5_PR1_CANDLESTICK",
@@ -461,17 +461,17 @@
       "status_source": "override",
       "has_blend": true,
       "has_png": true,
-      "blend_mtime": "2026-11-25T04:36:36+03:00",
-      "blend_mtime_ts": 1795570596.3150172,
-      "png_mtime": "2026-11-25T04:47:50+03:00",
-      "png_mtime_ts": 1795571270.838323,
+      "blend_mtime": "2026-11-25T04:52:47+03:00",
+      "blend_mtime_ts": 1795571567.7277317,
+      "png_mtime": "2026-11-25T04:53:24+03:00",
+      "png_mtime_ts": 1795571604.1117866,
       "png_newer": true,
       "preview_url": "previews/t6_pr1_1_cloth_vase.png",
       "note": "Сборка начата: файл сцены создан, рендера пока нет; спецификация T6_SPEC.md.",
       "agent": "builder-t6",
       "warnings": [],
-      "png_size": 1228955,
-      "blend_size": 14635432
+      "png_size": 1233303,
+      "blend_size": 14723497
     },
     {
       "id": "T6_PR1_2_TOWEL",
@@ -654,7 +654,7 @@
     "orphan_pngs": [],
     "unmatched_status_keys": []
   },
-  "generated_at": "2026-11-25T04:51:26+03:00",
-  "snapshot_at": "2026-11-25T04:51:26+03:00",
-  "content_hash": "e4023b55d75438fe56b2473dabc4bb089de01fcedc2997cbd7176296bb77ff29"
+  "generated_at": "2026-11-25T04:54:36+03:00",
+  "snapshot_at": "2026-11-25T04:54:36+03:00",
+  "content_hash": "5963632d32eaaaa76f6fdb57416d796fb8aec95b24aa2acfa5184593173cea5e"
 }
