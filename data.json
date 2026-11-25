@@ -259,9 +259,7 @@
       "preview_url": "previews/t5_pr1_cat.png",
       "note": "В работе, ожидает проверки.",
       "agent": null,
-      "warnings": [
-        "blend1"
-      ],
+      "warnings": [],
       "png_size": 1003526,
       "blend_size": 258429
     },
@@ -275,17 +273,17 @@
       "status_source": "override",
       "has_blend": true,
       "has_png": true,
-      "blend_mtime": "2026-11-25T03:38:39+03:00",
-      "blend_mtime_ts": 1795567119.2885687,
-      "png_mtime": "2026-11-25T03:40:12+03:00",
-      "png_mtime_ts": 1795567212.3097508,
+      "blend_mtime": "2026-11-25T03:42:05+03:00",
+      "blend_mtime_ts": 1795567325.8813465,
+      "png_mtime": "2026-11-25T03:43:06+03:00",
+      "png_mtime_ts": 1795567386.383661,
       "png_newer": true,
       "preview_url": "previews/t5_pr1_skirting.png",
-      "note": "В работе, ожидает проверки.",
+      "note": "Камера внутри комнаты, плинтус 8–11% кадра, вырожденные грани 0; ожидает повторной проверки.",
       "agent": null,
       "warnings": [],
-      "png_size": 1053850,
-      "blend_size": 97079
+      "png_size": 1054310,
+      "blend_size": 97090
     },
     {
       "id": "T5_PR1_CANDLESTICK",
@@ -354,7 +352,7 @@
     "orphan_pngs": [],
     "unmatched_status_keys": []
   },
-  "generated_at": "2026-11-25T03:41:59+03:00",
-  "snapshot_at": "2026-11-25T03:41:59+03:00",
-  "content_hash": "6f2ce21c1bac9be08f23770e5876291a03b791a447ec60768036abd349d2b943"
+  "generated_at": "2026-11-25T03:44:58+03:00",
+  "snapshot_at": "2026-11-25T03:44:58+03:00",
+  "content_hash": "1b69a6c6a518e4590743cf48620e6d1bd16805881a7798b855b85fb491033b2b"
 }
