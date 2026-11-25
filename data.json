@@ -88,7 +88,7 @@
       "blend_size": 64466261
     },
     {
-      "id": "T4_PR6",
+      "id": "T4_PR6_BOAT_SCENE_V3",
       "full_id": "T4_PR6_BOAT_SCENE_V3",
       "theme": "Тема 4",
       "theme_number": 4,
@@ -103,8 +103,8 @@
       "png_mtime_ts": null,
       "png_newer": null,
       "preview_url": null,
-      "note": "Файл пользователя; рендер старше сцены. Переделка идёт в PR6_v2 (4 части).",
-      "agent": "user",
+      "note": "v3 в работе после замечаний по воде/траве/лодке/пальмам; v2 отрендерена",
+      "agent": "pr6-wave",
       "warnings": [
         "no_png",
         "temp_preview"
@@ -658,11 +658,11 @@
     }
   ],
   "warnings": [],
-  "status_updated_at": "2026-11-25T05:03:48+03:00",
+  "status_updated_at": "2026-11-25T05:04:55+03:00",
   "diagnostics": {
     "workmcp": "workMCP",
     "status_file": "status.json",
-    "status_updated_at": "2026-11-25T05:03:48+03:00",
+    "status_updated_at": "2026-11-25T05:04:55+03:00",
     "scan_error": null,
     "status_error": null,
     "problems": [],
@@ -679,7 +679,7 @@
     "orphan_pngs": [],
     "unmatched_status_keys": []
   },
-  "generated_at": "2026-11-25T05:04:29+03:00",
-  "snapshot_at": "2026-11-25T05:04:29+03:00",
-  "content_hash": "24addfc552ccd71789412611f47649161280af5e3c9e976e7ebfc54c1e5c0e74"
+  "generated_at": "2026-11-25T05:05:16+03:00",
+  "snapshot_at": "2026-11-25T05:05:16+03:00",
+  "content_hash": "57abe88f6fe2604ab4e8725635b257502c346c7f3919df71e1630890459bec41"
 }
