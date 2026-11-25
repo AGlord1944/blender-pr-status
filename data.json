@@ -442,19 +442,17 @@
       "status": "in_progress",
       "status_source": "override",
       "has_blend": true,
-      "has_png": false,
+      "has_png": true,
       "blend_mtime": "2026-11-25T04:17:22+03:00",
       "blend_mtime_ts": 1795569442.3421493,
-      "png_mtime": null,
-      "png_mtime_ts": null,
-      "png_newer": null,
-      "preview_url": null,
+      "png_mtime": "2026-11-25T04:18:32+03:00",
+      "png_mtime_ts": 1795569512.4688716,
+      "png_newer": true,
+      "preview_url": "previews/t6_pr1_4_pouf.png",
       "note": "Сборка начата: файл сцены создан, рендера пока нет; спецификация T6_SPEC.md.",
       "agent": "builder-t6",
-      "warnings": [
-        "no_png"
-      ],
-      "png_size": null,
+      "warnings": [],
+      "png_size": 1207749,
       "blend_size": 174486
     },
     {
@@ -462,24 +460,22 @@
       "full_id": "T6_PR1_2_TOWEL",
       "theme": "Тема 6",
       "theme_number": 6,
-      "name": "PR1_2_TOWEL",
+      "name": "PR1_2_Towel",
       "status": "missing",
       "status_source": "override",
-      "has_blend": false,
-      "has_png": false,
-      "blend_mtime": null,
-      "blend_mtime_ts": null,
-      "png_mtime": null,
-      "png_mtime_ts": null,
-      "png_newer": null,
-      "preview_url": null,
+      "has_blend": true,
+      "has_png": true,
+      "blend_mtime": "2026-11-25T04:18:33+03:00",
+      "blend_mtime_ts": 1795569513.036116,
+      "png_mtime": "2026-11-25T04:18:41+03:00",
+      "png_mtime_ts": 1795569521.384213,
+      "png_newer": true,
+      "preview_url": "previews/t6_pr1_2_towel.png",
       "note": "Запланировано; спецификация T6_SPEC.md готова, сборка не начата",
       "agent": "spec",
-      "warnings": [
-        "no_files"
-      ],
-      "png_size": null,
-      "blend_size": null
+      "warnings": [],
+      "png_size": 1473953,
+      "blend_size": 130747
     },
     {
       "id": "T6_PR1_3_PILLOWS",
@@ -534,13 +530,13 @@
       "full_id": "T6_PR2_1_BASKET",
       "theme": "Тема 6",
       "theme_number": 6,
-      "name": "PR2_1_BASKET",
+      "name": "PR2_1_Basket",
       "status": "missing",
       "status_source": "override",
-      "has_blend": false,
+      "has_blend": true,
       "has_png": false,
-      "blend_mtime": null,
-      "blend_mtime_ts": null,
+      "blend_mtime": "2026-11-25T04:18:27+03:00",
+      "blend_mtime_ts": 1795569507.1554685,
       "png_mtime": null,
       "png_mtime_ts": null,
       "png_newer": null,
@@ -548,10 +544,10 @@
       "note": "Запланировано; спецификация T6_SPEC.md готова, сборка не начата",
       "agent": "spec",
       "warnings": [
-        "no_files"
+        "no_png"
       ],
       "png_size": null,
-      "blend_size": null
+      "blend_size": 176750
     },
     {
       "id": "T6_PR2_2_PAPER_ANIMATION",
@@ -563,8 +559,8 @@
       "status_source": "override",
       "has_blend": true,
       "has_png": false,
-      "blend_mtime": "2026-11-25T04:15:50+03:00",
-      "blend_mtime_ts": 1795569350.7533197,
+      "blend_mtime": "2026-11-25T04:18:38+03:00",
+      "blend_mtime_ts": 1795569518.9850414,
       "png_mtime": null,
       "png_mtime_ts": null,
       "png_newer": null,
@@ -575,7 +571,7 @@
         "no_png"
       ],
       "png_size": null,
-      "blend_size": 2977441
+      "blend_size": 2977069
     },
     {
       "id": "T6_PR2_2B_PAPER_CRUMPLED",
@@ -587,8 +583,8 @@
       "status_source": "override",
       "has_blend": true,
       "has_png": false,
-      "blend_mtime": "2026-11-25T04:17:19+03:00",
-      "blend_mtime_ts": 1795569439.2356882,
+      "blend_mtime": "2026-11-25T04:18:46+03:00",
+      "blend_mtime_ts": 1795569526.0155206,
       "png_mtime": null,
       "png_mtime_ts": null,
       "png_newer": null,
@@ -599,7 +595,7 @@
         "no_png"
       ],
       "png_size": null,
-      "blend_size": 469424
+      "blend_size": 469737
     }
   ],
   "warnings": [],
@@ -624,7 +620,7 @@
     "orphan_pngs": [],
     "unmatched_status_keys": []
   },
-  "generated_at": "2026-11-25T04:17:38+03:00",
-  "snapshot_at": "2026-11-25T04:17:38+03:00",
-  "content_hash": "8ddb6c3497b6bbebf0908be7d99253b958383580ef13e9a176e7d3e7d81e4123"
+  "generated_at": "2026-11-25T04:21:59+03:00",
+  "snapshot_at": "2026-11-25T04:21:59+03:00",
+  "content_hash": "bbd8734433129c18ecb1936176eddad199e64635dd654c91fa571835e25d5f70"
 }
