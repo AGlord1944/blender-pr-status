@@ -97,8 +97,8 @@
       "status_source": "override",
       "has_blend": true,
       "has_png": false,
-      "blend_mtime": "2026-11-25T05:07:31+03:00",
-      "blend_mtime_ts": 1795572451.3483846,
+      "blend_mtime": "2026-11-25T05:19:58+03:00",
+      "blend_mtime_ts": 1795573198.3024473,
       "png_mtime": null,
       "png_mtime_ts": null,
       "png_newer": null,
@@ -111,7 +111,7 @@
         "temp_preview"
       ],
       "png_size": null,
-      "blend_size": 64467092
+      "blend_size": 64527512
     },
     {
       "id": "T4_PR2",
@@ -507,8 +507,8 @@
       "status_source": "override",
       "has_blend": true,
       "has_png": false,
-      "blend_mtime": "2026-11-25T05:18:17+03:00",
-      "blend_mtime_ts": 1795573097.5739286,
+      "blend_mtime": "2026-11-25T05:21:20+03:00",
+      "blend_mtime_ts": 1795573280.1186576,
       "png_mtime": null,
       "png_mtime_ts": null,
       "png_newer": null,
@@ -519,7 +519,7 @@
         "no_png"
       ],
       "png_size": null,
-      "blend_size": 196889
+      "blend_size": 198758
     },
     {
       "id": "T6_PR2_1_BASKET",
@@ -702,7 +702,7 @@
     "orphan_pngs": [],
     "unmatched_status_keys": []
   },
-  "generated_at": "2026-11-25T05:18:23+03:00",
-  "snapshot_at": "2026-11-25T05:18:23+03:00",
-  "content_hash": "36b369eff16fe014b32e62fe9af6c59221f30372d8534791a9c587faeb85da7f"
+  "generated_at": "2026-11-25T05:21:25+03:00",
+  "snapshot_at": "2026-11-25T05:21:25+03:00",
+  "content_hash": "901f956bf93d613d4e16ccdadd48deb5d2c2f496be501982c7443e1537c248f3"
 }
