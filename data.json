@@ -58,7 +58,6 @@
       "agent": "user",
       "warnings": [
         "png_older",
-        "blend1",
         "temp_preview"
       ],
       "png_size": 1255989,
@@ -83,7 +82,6 @@
       "note": "Переделка сцены с лодкой: 4 части (вода/песок/трава, лодка, пальмы/камни, студия) в Тема 4/PR6_v2/parts; общий рендер ещё не собран; файл пользователя сохранён в PR6_v2/user_backup",
       "agent": "pr6-wave",
       "warnings": [
-        "blend1",
         "temp_preview"
       ],
       "png_size": 1400391,
@@ -368,13 +366,13 @@
       "full_id": "T5_PR1_CAT_V3",
       "theme": "Тема 5",
       "theme_number": 5,
-      "name": "PR1_CAT_V3",
+      "name": "PR1_Cat_v3",
       "status": "in_progress",
       "status_source": "override",
-      "has_blend": false,
+      "has_blend": true,
       "has_png": false,
-      "blend_mtime": null,
-      "blend_mtime_ts": null,
+      "blend_mtime": "2026-11-25T04:50:25+03:00",
+      "blend_mtime_ts": 1795571425.384295,
       "png_mtime": null,
       "png_mtime_ts": null,
       "png_newer": null,
@@ -382,10 +380,10 @@
       "note": "Третий проход по морде: свежая диагностика, глаза/зрачок/усы, новая версия v3; v2 не перезаписывается",
       "agent": "cat-v3",
       "warnings": [
-        "no_files"
+        "no_png"
       ],
       "png_size": null,
-      "blend_size": null
+      "blend_size": 264911
     },
     {
       "id": "T5_PR1_CANDLESTICK",
@@ -656,7 +654,7 @@
     "orphan_pngs": [],
     "unmatched_status_keys": []
   },
-  "generated_at": "2026-11-25T04:50:08+03:00",
-  "snapshot_at": "2026-11-25T04:50:08+03:00",
-  "content_hash": "d90fdeb2da57066d12164c8e59d49a8099a866b5a98d3fc24cea675e30700c1c"
+  "generated_at": "2026-11-25T04:51:26+03:00",
+  "snapshot_at": "2026-11-25T04:51:26+03:00",
+  "content_hash": "e4023b55d75438fe56b2473dabc4bb089de01fcedc2997cbd7176296bb77ff29"
 }
