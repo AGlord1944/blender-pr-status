@@ -563,8 +563,8 @@
       "status_source": "override",
       "has_blend": true,
       "has_png": false,
-      "blend_mtime": "2026-11-25T04:14:19+03:00",
-      "blend_mtime_ts": 1795569259.4323485,
+      "blend_mtime": "2026-11-25T04:15:50+03:00",
+      "blend_mtime_ts": 1795569350.7533197,
       "png_mtime": null,
       "png_mtime_ts": null,
       "png_newer": null,
@@ -575,7 +575,7 @@
         "no_png"
       ],
       "png_size": null,
-      "blend_size": 2978457
+      "blend_size": 2977441
     },
     {
       "id": "T6_PR2_2B_PAPER_CRUMPLED",
@@ -603,11 +603,11 @@
     }
   ],
   "warnings": [],
-  "status_updated_at": "2026-11-25T04:18:00+03:00",
+  "status_updated_at": "2026-11-25T04:21:30+03:00",
   "diagnostics": {
     "workmcp": "workMCP",
     "status_file": "status.json",
-    "status_updated_at": "2026-11-25T04:18:00+03:00",
+    "status_updated_at": "2026-11-25T04:21:30+03:00",
     "scan_error": null,
     "status_error": null,
     "problems": [],
@@ -624,7 +624,7 @@
     "orphan_pngs": [],
     "unmatched_status_keys": []
   },
-  "generated_at": "2026-11-25T04:15:25+03:00",
-  "snapshot_at": "2026-11-25T04:15:25+03:00",
-  "content_hash": "66235e2d96a748a836c775e43d9e1763b77d07a7a92b4a6aac5bea099f1c134b"
+  "generated_at": "2026-11-25T04:16:40+03:00",
+  "snapshot_at": "2026-11-25T04:16:40+03:00",
+  "content_hash": "3f9f6742a3c4f3dd784ac1c078235743b260a6753ca8bd41380700a4cc4d3591"
 }
