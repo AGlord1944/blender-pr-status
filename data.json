@@ -4,9 +4,9 @@
   "summary": {
     "total": 24,
     "done": 11,
-    "in_progress": 7,
+    "in_progress": 11,
     "failed": 0,
-    "missing": 6
+    "missing": 2
   },
   "themes": [
     {
@@ -32,9 +32,9 @@
       "number": 6,
       "total": 8,
       "done": 0,
-      "in_progress": 2,
+      "in_progress": 6,
       "failed": 0,
-      "missing": 6
+      "missing": 2
     }
   ],
   "works": [
@@ -434,6 +434,28 @@
       "blend_size": 8703598
     },
     {
+      "id": "T6_PR1_2_TOWEL",
+      "full_id": "T6_PR1_2_TOWEL",
+      "theme": "Тема 6",
+      "theme_number": 6,
+      "name": "PR1_2_Towel",
+      "status": "in_progress",
+      "status_source": "override",
+      "has_blend": true,
+      "has_png": true,
+      "blend_mtime": "2026-11-25T04:18:33+03:00",
+      "blend_mtime_ts": 1795569513.036116,
+      "png_mtime": "2026-11-25T04:18:41+03:00",
+      "png_mtime_ts": 1795569521.384213,
+      "png_newer": true,
+      "preview_url": "previews/t6_pr1_2_towel.png",
+      "note": "Собран: файл сцены и рендер есть, ждёт независимой проверки.",
+      "agent": "builder-t6",
+      "warnings": [],
+      "png_size": 1473953,
+      "blend_size": 130747
+    },
+    {
       "id": "T6_PR1_4_POUF",
       "full_id": "T6_PR1_4_POUF",
       "theme": "Тема 6",
@@ -449,33 +471,83 @@
       "png_mtime_ts": 1795569512.4688716,
       "png_newer": true,
       "preview_url": "previews/t6_pr1_4_pouf.png",
-      "note": "Сборка начата: файл сцены создан, рендера пока нет; спецификация T6_SPEC.md.",
+      "note": "Собран: файл сцены и рендер есть, ждёт независимой проверки.",
       "agent": "builder-t6",
       "warnings": [],
       "png_size": 1207749,
       "blend_size": 174486
     },
     {
-      "id": "T6_PR1_2_TOWEL",
-      "full_id": "T6_PR1_2_TOWEL",
+      "id": "T6_PR2_1_BASKET",
+      "full_id": "T6_PR2_1_BASKET",
       "theme": "Тема 6",
       "theme_number": 6,
-      "name": "PR1_2_Towel",
-      "status": "missing",
+      "name": "PR2_1_Basket",
+      "status": "in_progress",
       "status_source": "override",
       "has_blend": true,
-      "has_png": true,
-      "blend_mtime": "2026-11-25T04:18:33+03:00",
-      "blend_mtime_ts": 1795569513.036116,
-      "png_mtime": "2026-11-25T04:18:41+03:00",
-      "png_mtime_ts": 1795569521.384213,
-      "png_newer": true,
-      "preview_url": "previews/t6_pr1_2_towel.png",
-      "note": "Запланировано; спецификация T6_SPEC.md готова, сборка не начата",
-      "agent": "spec",
-      "warnings": [],
-      "png_size": 1473953,
-      "blend_size": 130747
+      "has_png": false,
+      "blend_mtime": "2026-11-25T04:18:27+03:00",
+      "blend_mtime_ts": 1795569507.1554685,
+      "png_mtime": null,
+      "png_mtime_ts": null,
+      "png_newer": null,
+      "preview_url": null,
+      "note": "Сборка начата: файл сцены создан, рендера пока нет; спецификация T6_SPEC.md.",
+      "agent": "builder-t6",
+      "warnings": [
+        "no_png"
+      ],
+      "png_size": null,
+      "blend_size": 176750
+    },
+    {
+      "id": "T6_PR2_2_PAPER_ANIMATION",
+      "full_id": "T6_PR2_2_PAPER_ANIMATION",
+      "theme": "Тема 6",
+      "theme_number": 6,
+      "name": "PR2_2_Paper_Animation",
+      "status": "in_progress",
+      "status_source": "override",
+      "has_blend": true,
+      "has_png": false,
+      "blend_mtime": "2026-11-25T04:18:38+03:00",
+      "blend_mtime_ts": 1795569518.9850414,
+      "png_mtime": null,
+      "png_mtime_ts": null,
+      "png_newer": null,
+      "preview_url": null,
+      "note": "Сборка начата: файл сцены создан, рендера пока нет; спецификация T6_SPEC.md.",
+      "agent": "builder-t6",
+      "warnings": [
+        "no_png"
+      ],
+      "png_size": null,
+      "blend_size": 2977069
+    },
+    {
+      "id": "T6_PR2_2B_PAPER_CRUMPLED",
+      "full_id": "T6_PR2_2B_PAPER_CRUMPLED",
+      "theme": "Тема 6",
+      "theme_number": 6,
+      "name": "PR2_2b_Paper_Crumpled",
+      "status": "in_progress",
+      "status_source": "override",
+      "has_blend": true,
+      "has_png": false,
+      "blend_mtime": "2026-11-25T04:18:46+03:00",
+      "blend_mtime_ts": 1795569526.0155206,
+      "png_mtime": null,
+      "png_mtime_ts": null,
+      "png_newer": null,
+      "preview_url": null,
+      "note": "Сборка начата: файл сцены создан, рендера пока нет; спецификация T6_SPEC.md.",
+      "agent": "builder-t6",
+      "warnings": [
+        "no_png"
+      ],
+      "png_size": null,
+      "blend_size": 469737
     },
     {
       "id": "T6_PR1_3_PILLOWS",
@@ -524,86 +596,14 @@
       ],
       "png_size": null,
       "blend_size": null
-    },
-    {
-      "id": "T6_PR2_1_BASKET",
-      "full_id": "T6_PR2_1_BASKET",
-      "theme": "Тема 6",
-      "theme_number": 6,
-      "name": "PR2_1_Basket",
-      "status": "missing",
-      "status_source": "override",
-      "has_blend": true,
-      "has_png": false,
-      "blend_mtime": "2026-11-25T04:18:27+03:00",
-      "blend_mtime_ts": 1795569507.1554685,
-      "png_mtime": null,
-      "png_mtime_ts": null,
-      "png_newer": null,
-      "preview_url": null,
-      "note": "Запланировано; спецификация T6_SPEC.md готова, сборка не начата",
-      "agent": "spec",
-      "warnings": [
-        "no_png"
-      ],
-      "png_size": null,
-      "blend_size": 176750
-    },
-    {
-      "id": "T6_PR2_2_PAPER_ANIMATION",
-      "full_id": "T6_PR2_2_PAPER_ANIMATION",
-      "theme": "Тема 6",
-      "theme_number": 6,
-      "name": "PR2_2_Paper_Animation",
-      "status": "missing",
-      "status_source": "override",
-      "has_blend": true,
-      "has_png": false,
-      "blend_mtime": "2026-11-25T04:18:38+03:00",
-      "blend_mtime_ts": 1795569518.9850414,
-      "png_mtime": null,
-      "png_mtime_ts": null,
-      "png_newer": null,
-      "preview_url": null,
-      "note": "Запланировано; спецификация T6_SPEC.md готова, сборка не начата",
-      "agent": "spec",
-      "warnings": [
-        "no_png"
-      ],
-      "png_size": null,
-      "blend_size": 2977069
-    },
-    {
-      "id": "T6_PR2_2B_PAPER_CRUMPLED",
-      "full_id": "T6_PR2_2B_PAPER_CRUMPLED",
-      "theme": "Тема 6",
-      "theme_number": 6,
-      "name": "PR2_2b_Paper_Crumpled",
-      "status": "missing",
-      "status_source": "override",
-      "has_blend": true,
-      "has_png": false,
-      "blend_mtime": "2026-11-25T04:18:46+03:00",
-      "blend_mtime_ts": 1795569526.0155206,
-      "png_mtime": null,
-      "png_mtime_ts": null,
-      "png_newer": null,
-      "preview_url": null,
-      "note": "Запланировано; спецификация T6_SPEC.md готова, сборка не начата",
-      "agent": "spec",
-      "warnings": [
-        "no_png"
-      ],
-      "png_size": null,
-      "blend_size": 469737
     }
   ],
   "warnings": [],
-  "status_updated_at": "2026-11-25T04:17:22+03:00",
+  "status_updated_at": "2026-11-25T04:22:56+03:00",
   "diagnostics": {
     "workmcp": "workMCP",
     "status_file": "status.json",
-    "status_updated_at": "2026-11-25T04:17:22+03:00",
+    "status_updated_at": "2026-11-25T04:22:56+03:00",
     "scan_error": null,
     "status_error": null,
     "problems": [],
@@ -620,7 +620,7 @@
     "orphan_pngs": [],
     "unmatched_status_keys": []
   },
-  "generated_at": "2026-11-25T04:21:59+03:00",
-  "snapshot_at": "2026-11-25T04:21:59+03:00",
-  "content_hash": "bbd8734433129c18ecb1936176eddad199e64635dd654c91fa571835e25d5f70"
+  "generated_at": "2026-11-25T04:23:33+03:00",
+  "snapshot_at": "2026-11-25T04:23:33+03:00",
+  "content_hash": "7663285e4d83df7a395b6b237fe948b9dc297635d79b46d7590198d37d540d7a"
 }
