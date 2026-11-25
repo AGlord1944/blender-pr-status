@@ -3,8 +3,8 @@
   "mode": "snapshot",
   "summary": {
     "total": 32,
-    "done": 20,
-    "in_progress": 9,
+    "done": 22,
+    "in_progress": 7,
     "failed": 3,
     "missing": 0
   },
@@ -22,8 +22,8 @@
       "name": "Тема 5",
       "number": 5,
       "total": 8,
-      "done": 4,
-      "in_progress": 3,
+      "done": 5,
+      "in_progress": 2,
       "failed": 1,
       "missing": 0
     },
@@ -31,8 +31,8 @@
       "name": "Тема 6",
       "number": 6,
       "total": 9,
-      "done": 7,
-      "in_progress": 1,
+      "done": 8,
+      "in_progress": 0,
       "failed": 1,
       "missing": 0
     }
@@ -160,7 +160,7 @@
       "blend_size": 64471320
     },
     {
-      "id": "T4_PR6",
+      "id": "T4_PR6_BOAT_SCENE_V6",
       "full_id": "T4_PR6_BOAT_SCENE_V6",
       "theme": "Тема 4",
       "theme_number": 4,
@@ -175,8 +175,8 @@
       "png_mtime_ts": 1795575074.6638296,
       "png_newer": true,
       "preview_url": "previews/t4_pr6_boat_scene_v6.png",
-      "note": "Файл пользователя; рендер старше сцены. Переделка идёт в PR6_v2 (4 части).",
-      "agent": "user",
+      "note": "v6: вода Transparent 0.25/roughness 0.02/Bump, трава 0.03 (отклонение), UV 0…1, камни над водой, ortho 3.45",
+      "agent": "pr6-v3",
       "warnings": [
         "temp_preview"
       ],
@@ -458,28 +458,6 @@
       "blend_size": 264577
     },
     {
-      "id": "T5_PR1_CAT_V4",
-      "full_id": "T5_PR1_CAT_V4",
-      "theme": "Тема 5",
-      "theme_number": 5,
-      "name": "PR1_Cat_v4",
-      "status": "in_progress",
-      "status_source": "override",
-      "has_blend": true,
-      "has_png": true,
-      "blend_mtime": "2026-11-25T05:43:37+03:00",
-      "blend_mtime_ts": 1795574617.47858,
-      "png_mtime": "2026-11-25T05:44:08+03:00",
-      "png_mtime_ts": 1795574648.9325266,
-      "png_newer": true,
-      "preview_url": "previews/t5_pr1_cat_v4.png",
-      "note": "v4: линза 0.1608×0.0700, bbox 0.1511×0.0741 (h/w 0.491), рендер 47×26/48×26 (h/w 0.553/0.542; кот.png 0.545), зрачок 0.020×0.050 h/w 2.5; 1080/192; ждёт независимой проверки",
-      "agent": "cat-v4",
-      "warnings": [],
-      "png_size": 1004971,
-      "blend_size": 264541
-    },
-    {
       "id": "T5_PR1_CANDLESTICK",
       "full_id": "T5_PR1_CANDLESTICK",
       "theme": "Тема 5",
@@ -522,6 +500,28 @@
       "warnings": [],
       "png_size": 1004846,
       "blend_size": 264358
+    },
+    {
+      "id": "T5_PR1_CAT_V4",
+      "full_id": "T5_PR1_CAT_V4",
+      "theme": "Тема 5",
+      "theme_number": 5,
+      "name": "PR1_Cat_v4",
+      "status": "done",
+      "status_source": "override",
+      "has_blend": true,
+      "has_png": true,
+      "blend_mtime": "2026-11-25T05:43:37+03:00",
+      "blend_mtime_ts": 1795574617.47858,
+      "png_mtime": "2026-11-25T05:44:08+03:00",
+      "png_mtime_ts": 1795574648.9325266,
+      "png_newer": true,
+      "preview_url": "previews/t5_pr1_cat_v4.png",
+      "note": "PASS WITH NOTES: глаза 0.1511×0.0741 (h/w 0.553/0.562 в рендере, как кот.png 0.545), зрачок 0.020×0.050 (6×16 px), усы 3+3 без плиты, морда без бугра; v3/v2/оригинал не тронуты",
+      "agent": "cat-review",
+      "warnings": [],
+      "png_size": 1004971,
+      "blend_size": 264541
     },
     {
       "id": "T5_PR1_SKIRTING",
@@ -590,28 +590,6 @@
       "blend_size": 196102
     },
     {
-      "id": "T6_PR1_3_PILLOWS_V2",
-      "full_id": "T6_PR1_3_PILLOWS_V2",
-      "theme": "Тема 6",
-      "theme_number": 6,
-      "name": "PR1_3_Pillows_v2",
-      "status": "in_progress",
-      "status_source": "override",
-      "has_blend": true,
-      "has_png": true,
-      "blend_mtime": "2026-11-25T05:24:51+03:00",
-      "blend_mtime_ts": 1795573491.131954,
-      "png_mtime": "2026-11-25T05:24:57+03:00",
-      "png_mtime_ts": 1795573497.1117496,
-      "png_newer": true,
-      "preview_url": "previews/t6_pr1_3_pillows_v2.png",
-      "note": "v2: доворот −38°/−54°, aspect 1.00/0.98, заполнение 34.7 %, шов/градиент исправлены; идёт повторная проверка",
-      "agent": "pillow-fix",
-      "warnings": [],
-      "png_size": 930561,
-      "blend_size": 198795
-    },
-    {
       "id": "T6_PR1_1_CLOTH_VASE",
       "full_id": "T6_PR1_1_CLOTH_VASE",
       "theme": "Тема 6",
@@ -654,6 +632,28 @@
       "warnings": [],
       "png_size": 1520276,
       "blend_size": 130749
+    },
+    {
+      "id": "T6_PR1_3_PILLOWS_V2",
+      "full_id": "T6_PR1_3_PILLOWS_V2",
+      "theme": "Тема 6",
+      "theme_number": 6,
+      "name": "PR1_3_Pillows_v2",
+      "status": "done",
+      "status_source": "override",
+      "has_blend": true,
+      "has_png": true,
+      "blend_mtime": "2026-11-25T05:24:51+03:00",
+      "blend_mtime_ts": 1795573491.131954,
+      "png_mtime": "2026-11-25T05:24:57+03:00",
+      "png_mtime_ts": 1795573497.1117496,
+      "png_newer": true,
+      "preview_url": "previews/t6_pr1_3_pillows_v2.png",
+      "note": "PASS WITH NOTES: aspect 1.00/0.98, заполнение 35 %, шов/градиент исправлены; v1 сохранена как failed",
+      "agent": "pillow-review",
+      "warnings": [],
+      "png_size": 930561,
+      "blend_size": 198795
     },
     {
       "id": "T6_PR1_4_POUF",
@@ -771,11 +771,11 @@
     }
   ],
   "warnings": [],
-  "status_updated_at": "2026-11-25T05:49:58+03:00",
+  "status_updated_at": "2026-11-25T05:56:42+03:00",
   "diagnostics": {
     "workmcp": "workMCP",
     "status_file": "status.json",
-    "status_updated_at": "2026-11-25T05:49:58+03:00",
+    "status_updated_at": "2026-11-25T05:56:42+03:00",
     "scan_error": null,
     "status_error": null,
     "problems": [],
@@ -792,7 +792,7 @@
     "orphan_pngs": [],
     "unmatched_status_keys": []
   },
-  "generated_at": "2026-11-25T05:54:28+03:00",
-  "snapshot_at": "2026-11-25T05:54:28+03:00",
-  "content_hash": "be9c578c1fc5f353eb952d01164e4c2f53f59dd000c9104573dfbdf7f30e180e"
+  "generated_at": "2026-11-25T05:57:02+03:00",
+  "snapshot_at": "2026-11-25T05:57:02+03:00",
+  "content_hash": "9f3a621fb871142b833eb3f65877cda4da4886540751cd487ff91e3a4bf0f215"
 }
