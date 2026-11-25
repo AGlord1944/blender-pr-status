@@ -69,13 +69,13 @@
       "full_id": "T4_PR6_BOAT_SCENE_V2",
       "theme": "Тема 4",
       "theme_number": 4,
-      "name": "PR6_BOAT_SCENE_V2",
+      "name": "PR6_Boat_Scene_v2",
       "status": "in_progress",
       "status_source": "override",
-      "has_blend": false,
+      "has_blend": true,
       "has_png": false,
-      "blend_mtime": null,
-      "blend_mtime_ts": null,
+      "blend_mtime": "2026-11-25T04:38:09+03:00",
+      "blend_mtime_ts": 1795570689.105926,
       "png_mtime": null,
       "png_mtime_ts": null,
       "png_newer": null,
@@ -83,10 +83,11 @@
       "note": "Переделка сцены с лодкой: 4 части (вода/песок/трава, лодка, пальмы/камни, студия) в Тема 4/PR6_v2/parts; общий рендер ещё не собран; файл пользователя сохранён в PR6_v2/user_backup",
       "agent": "pr6-wave",
       "warnings": [
-        "no_files"
+        "no_png",
+        "temp_preview"
       ],
       "png_size": null,
-      "blend_size": null
+      "blend_size": 64330333
     },
     {
       "id": "T4_PR2",
@@ -471,8 +472,7 @@
       "note": "Сборка начата: файл сцены создан, рендера пока нет; спецификация T6_SPEC.md.",
       "agent": "builder-t6",
       "warnings": [
-        "no_png",
-        "blend1"
+        "no_png"
       ],
       "png_size": null,
       "blend_size": 14635432
@@ -575,8 +575,8 @@
       "status_source": "override",
       "has_blend": true,
       "has_png": false,
-      "blend_mtime": "2026-11-25T04:30:39+03:00",
-      "blend_mtime_ts": 1795570239.3926425,
+      "blend_mtime": "2026-11-25T04:40:20+03:00",
+      "blend_mtime_ts": 1795570820.122056,
       "png_mtime": null,
       "png_mtime_ts": null,
       "png_newer": null,
@@ -587,7 +587,7 @@
         "no_png"
       ],
       "png_size": null,
-      "blend_size": 176826
+      "blend_size": 441767
     },
     {
       "id": "T6_PR2_2_PAPER_ANIMATION",
@@ -660,7 +660,7 @@
     "orphan_pngs": [],
     "unmatched_status_keys": []
   },
-  "generated_at": "2026-11-25T04:37:33+03:00",
-  "snapshot_at": "2026-11-25T04:37:33+03:00",
-  "content_hash": "6474000124490b9161c413acb33b8c33a057b3a47f8d90edc957b93ce8524c27"
+  "generated_at": "2026-11-25T04:40:45+03:00",
+  "snapshot_at": "2026-11-25T04:40:45+03:00",
+  "content_hash": "f6909736229a471fb367b1076cdf961fe9aa66dd63ab95189d8d06f118957d20"
 }
