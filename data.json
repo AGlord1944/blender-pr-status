@@ -2,9 +2,9 @@
   "ok": true,
   "mode": "snapshot",
   "summary": {
-    "total": 30,
+    "total": 31,
     "done": 20,
-    "in_progress": 7,
+    "in_progress": 8,
     "failed": 3,
     "missing": 0
   },
@@ -12,9 +12,9 @@
     {
       "name": "Тема 4",
       "number": 4,
-      "total": 13,
+      "total": 14,
       "done": 9,
-      "in_progress": 3,
+      "in_progress": 4,
       "failed": 1,
       "missing": 0
     },
@@ -136,6 +136,30 @@
       ],
       "png_size": 1213656,
       "blend_size": 64800202
+    },
+    {
+      "id": "T4_PR6",
+      "full_id": "T4_PR6_BOAT_SCENE_V5",
+      "theme": "Тема 4",
+      "theme_number": 4,
+      "name": "PR6_Boat_Scene_v5",
+      "status": "in_progress",
+      "status_source": "override",
+      "has_blend": true,
+      "has_png": true,
+      "blend_mtime": "2026-11-25T05:41:23+03:00",
+      "blend_mtime_ts": 1795574483.8708513,
+      "png_mtime": "2026-11-25T05:42:08+03:00",
+      "png_mtime_ts": 1795574528.6403704,
+      "png_newer": true,
+      "preview_url": "previews/t4_pr6_boat_scene_v5.png",
+      "note": "Файл пользователя; рендер старше сцены. Переделка идёт в PR6_v2 (4 части).",
+      "agent": "user",
+      "warnings": [
+        "temp_preview"
+      ],
+      "png_size": 1218483,
+      "blend_size": 64471320
     },
     {
       "id": "T4_PR2",
@@ -420,20 +444,18 @@
       "status": "in_progress",
       "status_source": "override",
       "has_blend": true,
-      "has_png": false,
-      "blend_mtime": "2026-11-25T05:38:28+03:00",
-      "blend_mtime_ts": 1795574308.6394005,
-      "png_mtime": null,
-      "png_mtime_ts": null,
-      "png_newer": null,
-      "preview_url": null,
+      "has_png": true,
+      "blend_mtime": "2026-11-25T05:39:29+03:00",
+      "blend_mtime_ts": 1795574369.4684234,
+      "png_mtime": "2026-11-25T05:40:10+03:00",
+      "png_mtime_ts": 1795574410.794159,
+      "png_newer": true,
+      "preview_url": "previews/t5_pr1_cat_v4.png",
       "note": "v4: высота линзы 0.068–0.072 при ширине 0.151, ближе к кот.png; v3 не перезаписывается",
       "agent": "cat-v4",
-      "warnings": [
-        "no_png"
-      ],
-      "png_size": null,
-      "blend_size": 264546
+      "warnings": [],
+      "png_size": 1005046,
+      "blend_size": 264516
     },
     {
       "id": "T5_PR1_CANDLESTICK",
@@ -748,7 +770,7 @@
     "orphan_pngs": [],
     "unmatched_status_keys": []
   },
-  "generated_at": "2026-11-25T05:39:26+03:00",
-  "snapshot_at": "2026-11-25T05:39:26+03:00",
-  "content_hash": "ffaf97172d890ccd42a19ab9dfe993487b76c5828b710b86a04da145cadc8975"
+  "generated_at": "2026-11-25T05:42:35+03:00",
+  "snapshot_at": "2026-11-25T05:42:35+03:00",
+  "content_hash": "4e5e48e0668f2a153ee45acc799d4c99597e399cc7d6b61524cdf9d128bafe55"
 }
