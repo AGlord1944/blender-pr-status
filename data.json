@@ -487,8 +487,8 @@
       "status_source": "override",
       "has_blend": true,
       "has_png": false,
-      "blend_mtime": "2026-11-25T04:18:27+03:00",
-      "blend_mtime_ts": 1795569507.1554685,
+      "blend_mtime": "2026-11-25T04:25:03+03:00",
+      "blend_mtime_ts": 1795569903.6290941,
       "png_mtime": null,
       "png_mtime_ts": null,
       "png_newer": null,
@@ -499,7 +499,7 @@
         "no_png"
       ],
       "png_size": null,
-      "blend_size": 176750
+      "blend_size": 175181
     },
     {
       "id": "T6_PR2_2_PAPER_ANIMATION",
@@ -578,24 +578,22 @@
       "full_id": "T6_PR1_5_CURTAIN",
       "theme": "Тема 6",
       "theme_number": 6,
-      "name": "PR1_5_CURTAIN",
+      "name": "PR1_5_Curtain",
       "status": "missing",
       "status_source": "override",
-      "has_blend": false,
-      "has_png": false,
-      "blend_mtime": null,
-      "blend_mtime_ts": null,
-      "png_mtime": null,
-      "png_mtime_ts": null,
-      "png_newer": null,
-      "preview_url": null,
+      "has_blend": true,
+      "has_png": true,
+      "blend_mtime": "2026-11-25T04:25:51+03:00",
+      "blend_mtime_ts": 1795569951.2458673,
+      "png_mtime": "2026-11-25T04:26:08+03:00",
+      "png_mtime_ts": 1795569968.8167224,
+      "png_newer": true,
+      "preview_url": "previews/t6_pr1_5_curtain.png",
       "note": "Запланировано; спецификация T6_SPEC.md готова, сборка не начата",
       "agent": "spec",
-      "warnings": [
-        "no_files"
-      ],
-      "png_size": null,
-      "blend_size": null
+      "warnings": [],
+      "png_size": 1154646,
+      "blend_size": 800129
     }
   ],
   "warnings": [],
@@ -620,7 +618,7 @@
     "orphan_pngs": [],
     "unmatched_status_keys": []
   },
-  "generated_at": "2026-11-25T04:23:33+03:00",
-  "snapshot_at": "2026-11-25T04:23:33+03:00",
-  "content_hash": "7663285e4d83df7a395b6b237fe948b9dc297635d79b46d7590198d37d540d7a"
+  "generated_at": "2026-11-25T04:27:39+03:00",
+  "snapshot_at": "2026-11-25T04:27:39+03:00",
+  "content_hash": "171cd5af0b52dbd808880a06692f0349bb4cff5f56037f82a482d2344a3ad1dc"
 }
