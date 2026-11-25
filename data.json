@@ -251,17 +251,19 @@
       "status_source": "override",
       "has_blend": true,
       "has_png": true,
-      "blend_mtime": "2026-11-25T03:08:05+03:00",
-      "blend_mtime_ts": 1795565285.6027286,
-      "png_mtime": "2026-11-25T03:08:26+03:00",
-      "png_mtime_ts": 1795565306.4104018,
+      "blend_mtime": "2026-11-25T03:28:20+03:00",
+      "blend_mtime_ts": 1795566500.8867452,
+      "png_mtime": "2026-11-25T03:28:43+03:00",
+      "png_mtime_ts": 1795566523.5896683,
       "png_newer": true,
       "preview_url": "previews/t5_pr1_cat.png",
       "note": "В работе, ожидает проверки.",
       "agent": null,
-      "warnings": [],
-      "png_size": 994076,
-      "blend_size": 258353
+      "warnings": [
+        "blend1"
+      ],
+      "png_size": 997091,
+      "blend_size": 258456
     },
     {
       "id": "T5_PR1_SKIRTING",
@@ -295,17 +297,17 @@
       "status_source": "override",
       "has_blend": true,
       "has_png": true,
-      "blend_mtime": "2026-11-25T02:57:40+03:00",
-      "blend_mtime_ts": 1795564660.6883726,
-      "png_mtime": "2026-11-25T02:57:48+03:00",
-      "png_mtime_ts": 1795564668.553977,
+      "blend_mtime": "2026-11-25T03:27:34+03:00",
+      "blend_mtime_ts": 1795566454.529735,
+      "png_mtime": "2026-11-25T03:27:42+03:00",
+      "png_mtime_ts": 1795566462.2064552,
       "png_newer": true,
       "preview_url": "previews/t5_pr2_candle.png",
       "note": "Переделка после FAIL.",
       "agent": "builder-candle",
       "warnings": [],
-      "png_size": 692330,
-      "blend_size": 1319142
+      "png_size": 688426,
+      "blend_size": 1304475
     },
     {
       "id": "T5_PR1_CANDLESTICK",
@@ -352,7 +354,7 @@
     "orphan_pngs": [],
     "unmatched_status_keys": []
   },
-  "generated_at": "2026-11-25T03:21:01+03:00",
-  "snapshot_at": "2026-11-25T03:21:01+03:00",
-  "content_hash": "27e30bcd295425a7a5ade70194e0913d45966ced036136ad60fae3c9f9855260"
+  "generated_at": "2026-11-25T03:29:58+03:00",
+  "snapshot_at": "2026-11-25T03:29:58+03:00",
+  "content_hash": "cd2564bf4d61784c954e9d3771881115663a1f80d1b7fef58fcfc715b9e6d7ca"
 }
