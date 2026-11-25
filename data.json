@@ -251,10 +251,10 @@
       "status_source": "override",
       "has_blend": true,
       "has_png": true,
-      "blend_mtime": "2026-11-25T03:35:50+03:00",
-      "blend_mtime_ts": 1795566950.7689865,
-      "png_mtime": "2026-11-25T03:35:26+03:00",
-      "png_mtime_ts": 1795566926.5968072,
+      "blend_mtime": "2026-11-25T03:38:25+03:00",
+      "blend_mtime_ts": 1795567105.0992756,
+      "png_mtime": "2026-11-25T03:37:45+03:00",
+      "png_mtime_ts": 1795567065.4335454,
       "png_newer": false,
       "preview_url": "previews/t5_pr1_cat.png",
       "note": "В работе, ожидает проверки.",
@@ -263,8 +263,8 @@
         "png_older",
         "blend1"
       ],
-      "png_size": 1009035,
-      "blend_size": 258451
+      "png_size": 1004132,
+      "blend_size": 258433
     },
     {
       "id": "T5_PR1_SKIRTING",
@@ -276,17 +276,20 @@
       "status_source": "override",
       "has_blend": true,
       "has_png": true,
-      "blend_mtime": "2026-11-25T03:18:55+03:00",
-      "blend_mtime_ts": 1795565935.6992714,
+      "blend_mtime": "2026-11-25T03:38:39+03:00",
+      "blend_mtime_ts": 1795567119.2885687,
       "png_mtime": "2026-11-25T03:19:46+03:00",
       "png_mtime_ts": 1795565986.3162138,
-      "png_newer": true,
+      "png_newer": false,
       "preview_url": "previews/t5_pr1_skirting.png",
       "note": "В работе, ожидает проверки.",
       "agent": null,
-      "warnings": [],
+      "warnings": [
+        "png_older",
+        "blend1"
+      ],
       "png_size": 704345,
-      "blend_size": 97168
+      "blend_size": 97079
     },
     {
       "id": "T5_PR1_CANDLESTICK",
@@ -355,7 +358,7 @@
     "orphan_pngs": [],
     "unmatched_status_keys": []
   },
-  "generated_at": "2026-11-25T03:36:02+03:00",
-  "snapshot_at": "2026-11-25T03:36:02+03:00",
-  "content_hash": "6a5ba76e78b2cfdf1ce0fb8ede30c6230835eba5a83e024819ad7155095e80bd"
+  "generated_at": "2026-11-25T03:39:11+03:00",
+  "snapshot_at": "2026-11-25T03:39:11+03:00",
+  "content_hash": "590ee53dde43455cc1fb7163de1b42465715064655e93ee632b310cb7b99c9b1"
 }
