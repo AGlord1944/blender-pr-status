@@ -2,10 +2,10 @@
   "ok": true,
   "mode": "snapshot",
   "summary": {
-    "total": 24,
-    "done": 11,
-    "in_progress": 12,
-    "failed": 0,
+    "total": 26,
+    "done": 12,
+    "in_progress": 11,
+    "failed": 2,
     "missing": 1
   },
   "themes": [
@@ -13,18 +13,18 @@
       "name": "Тема 4",
       "number": 4,
       "total": 11,
-      "done": 8,
-      "in_progress": 3,
+      "done": 9,
+      "in_progress": 2,
       "failed": 0,
       "missing": 0
     },
     {
       "name": "Тема 5",
       "number": 5,
-      "total": 5,
+      "total": 7,
       "done": 3,
       "in_progress": 2,
-      "failed": 0,
+      "failed": 2,
       "missing": 0
     },
     {
@@ -38,28 +38,6 @@
     }
   ],
   "works": [
-    {
-      "id": "T4_PR2_2_BUTTON_V2",
-      "full_id": "T4_PR2_2_BUTTON_V2",
-      "theme": "Тема 4",
-      "theme_number": 4,
-      "name": "PR2_2_Button_v2",
-      "status": "in_progress",
-      "status_source": "override",
-      "has_blend": true,
-      "has_png": true,
-      "blend_mtime": "2026-11-25T04:12:13+03:00",
-      "blend_mtime_ts": 1795569133.768822,
-      "png_mtime": "2026-11-25T04:12:43+03:00",
-      "png_mtime_ts": 1795569163.4128995,
-      "png_newer": true,
-      "preview_url": "previews/t4_pr2_2_button_v2.png",
-      "note": "Собран: отверстия ближе к центру (x=±0.44) и крупнее (R=0.14), как на #20; рендер новее сцены, ждёт независимой проверки (PASS нет).",
-      "agent": "button-fix",
-      "warnings": [],
-      "png_size": 1586332,
-      "blend_size": 313600
-    },
     {
       "id": "T4_PR6",
       "full_id": "T4_PR6_BOAT_SCENE",
@@ -157,6 +135,28 @@
       ],
       "png_size": 1623865,
       "blend_size": 303771
+    },
+    {
+      "id": "T4_PR2_2_BUTTON_V2",
+      "full_id": "T4_PR2_2_BUTTON_V2",
+      "theme": "Тема 4",
+      "theme_number": 4,
+      "name": "PR2_2_Button_v2",
+      "status": "done",
+      "status_source": "override",
+      "has_blend": true,
+      "has_png": true,
+      "blend_mtime": "2026-11-25T04:12:13+03:00",
+      "blend_mtime_ts": 1795569133.768822,
+      "png_mtime": "2026-11-25T04:12:43+03:00",
+      "png_mtime_ts": 1795569163.4128995,
+      "png_newer": true,
+      "preview_url": "previews/t4_pr2_2_button_v2.png",
+      "note": "PASS WITH NOTES: отверстия ±0.44, R=0.14, сквозные; внешняя форма без изменений; замечание — Cycles вместо EEVEE и формулировки отчёта",
+      "agent": "button-fix",
+      "warnings": [],
+      "png_size": 1586332,
+      "blend_size": 313600
     },
     {
       "id": "T4_PR2",
@@ -297,6 +297,53 @@
       "blend_size": 142151
     },
     {
+      "id": "T5_PR1_CAT_V2",
+      "full_id": "T5_PR1_CAT_V2",
+      "theme": "Тема 5",
+      "theme_number": 5,
+      "name": "PR1_Cat_v2",
+      "status": "failed",
+      "status_source": "override",
+      "has_blend": true,
+      "has_png": true,
+      "blend_mtime": "2026-11-25T04:04:23+03:00",
+      "blend_mtime_ts": 1795568663.254691,
+      "png_mtime": "2026-11-25T04:04:54+03:00",
+      "png_mtime_ts": 1795568694.132801,
+      "png_newer": true,
+      "preview_url": "previews/t5_pr1_cat_v2.png",
+      "note": "FAIL: зрачок-ромб 0.029×0.037 (h/w 1.29) и наклон глаза 6° вместо 15–29°; проверенная версия сохранена в reviewed/",
+      "agent": "cat-fix",
+      "warnings": [],
+      "png_size": 1006007,
+      "blend_size": 257975
+    },
+    {
+      "id": "T5_PR1_CAT_V2",
+      "full_id": "T5_PR1_CAT_V2_FIX",
+      "theme": "Тема 5",
+      "theme_number": 5,
+      "name": "PR1_Cat_v2_fix",
+      "status": "failed",
+      "status_source": "override",
+      "has_blend": true,
+      "has_png": false,
+      "blend_mtime": "2026-11-25T04:34:28+03:00",
+      "blend_mtime_ts": 1795570468.9348972,
+      "png_mtime": null,
+      "png_mtime_ts": null,
+      "png_newer": null,
+      "preview_url": null,
+      "note": "FAIL: зрачок-ромб 0.029×0.037 (h/w 1.29) и наклон глаза 6° вместо 15–29°; проверенная версия сохранена в reviewed/",
+      "agent": "cat-fix",
+      "warnings": [
+        "no_png",
+        "blend1"
+      ],
+      "png_size": null,
+      "blend_size": 264015
+    },
+    {
       "id": "T5_PR1_CAT",
       "full_id": "T5_PR1_CAT",
       "theme": "Тема 5",
@@ -321,26 +368,28 @@
       "blend_size": 258219
     },
     {
-      "id": "T5_PR1_CAT_V2",
-      "full_id": "T5_PR1_CAT_V2",
+      "id": "T5_PR1_CAT_V3",
+      "full_id": "T5_PR1_CAT_V3",
       "theme": "Тема 5",
       "theme_number": 5,
-      "name": "PR1_Cat_v2",
+      "name": "PR1_CAT_V3",
       "status": "in_progress",
       "status_source": "override",
-      "has_blend": true,
-      "has_png": true,
-      "blend_mtime": "2026-11-25T04:04:23+03:00",
-      "blend_mtime_ts": 1795568663.254691,
-      "png_mtime": "2026-11-25T04:04:54+03:00",
-      "png_mtime_ts": 1795568694.132801,
-      "png_newer": true,
-      "preview_url": "previews/t5_pr1_cat_v2.png",
-      "note": "Собран: глаза меньше и правильной формы, усы чёрные и толще; рендер новее сцены, ждёт независимой проверки.",
-      "agent": "cat-fix",
-      "warnings": [],
-      "png_size": 1006007,
-      "blend_size": 257975
+      "has_blend": false,
+      "has_png": false,
+      "blend_mtime": null,
+      "blend_mtime_ts": null,
+      "png_mtime": null,
+      "png_mtime_ts": null,
+      "png_newer": null,
+      "preview_url": null,
+      "note": "Третий проход по морде: свежая диагностика, глаза/зрачок/усы, новая версия v3; v2 не перезаписывается",
+      "agent": "cat-v3",
+      "warnings": [
+        "no_files"
+      ],
+      "png_size": null,
+      "blend_size": null
     },
     {
       "id": "T5_PR1_CANDLESTICK",
@@ -597,11 +646,11 @@
     }
   ],
   "warnings": [],
-  "status_updated_at": "2026-11-25T04:29:51+03:00",
+  "status_updated_at": "2026-11-25T04:34:11+03:00",
   "diagnostics": {
     "workmcp": "workMCP",
     "status_file": "status.json",
-    "status_updated_at": "2026-11-25T04:29:51+03:00",
+    "status_updated_at": "2026-11-25T04:34:11+03:00",
     "scan_error": null,
     "status_error": null,
     "problems": [],
@@ -618,7 +667,7 @@
     "orphan_pngs": [],
     "unmatched_status_keys": []
   },
-  "generated_at": "2026-11-25T04:33:37+03:00",
-  "snapshot_at": "2026-11-25T04:33:37+03:00",
-  "content_hash": "a5b87a7ea87c789af5b0cc01c95e92318b99f913db9923220034b0f8f20b76d7"
+  "generated_at": "2026-11-25T04:34:38+03:00",
+  "snapshot_at": "2026-11-25T04:34:38+03:00",
+  "content_hash": "6440fb83a0c92633404a191096c910b5b131b622b60414094de331aa11a77927"
 }
