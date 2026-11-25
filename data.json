@@ -178,7 +178,6 @@
       "note": "Файл пользователя; рендер старше сцены. Переделка идёт в PR6_v2 (4 части).",
       "agent": "user",
       "warnings": [
-        "blend1",
         "temp_preview"
       ],
       "png_size": 1193389,
@@ -793,7 +792,7 @@
     "orphan_pngs": [],
     "unmatched_status_keys": []
   },
-  "generated_at": "2026-11-25T05:51:37+03:00",
-  "snapshot_at": "2026-11-25T05:51:37+03:00",
-  "content_hash": "966d5945ff8164b18f277274a4c3f29db00513219fa1954f926fa0539bec7078"
+  "generated_at": "2026-11-25T05:54:28+03:00",
+  "snapshot_at": "2026-11-25T05:54:28+03:00",
+  "content_hash": "be9c578c1fc5f353eb952d01164e4c2f53f59dd000c9104573dfbdf7f30e180e"
 }
