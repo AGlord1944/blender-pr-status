@@ -509,8 +509,8 @@
       "status_source": "override",
       "has_blend": true,
       "has_png": false,
-      "blend_mtime": "2026-11-25T04:25:03+03:00",
-      "blend_mtime_ts": 1795569903.6290941,
+      "blend_mtime": "2026-11-25T04:30:39+03:00",
+      "blend_mtime_ts": 1795570239.3926425,
       "png_mtime": null,
       "png_mtime_ts": null,
       "png_newer": null,
@@ -521,7 +521,7 @@
         "no_png"
       ],
       "png_size": null,
-      "blend_size": 175181
+      "blend_size": 176826
     },
     {
       "id": "T6_PR2_2_PAPER_ANIMATION",
@@ -618,7 +618,7 @@
     "orphan_pngs": [],
     "unmatched_status_keys": []
   },
-  "generated_at": "2026-11-25T04:30:25+03:00",
-  "snapshot_at": "2026-11-25T04:30:25+03:00",
-  "content_hash": "37e29279db748856f0a5436dc83d6f71d2ebe7aa8e930a6d07a282b804b30f48"
+  "generated_at": "2026-11-25T04:30:51+03:00",
+  "snapshot_at": "2026-11-25T04:30:51+03:00",
+  "content_hash": "34500821789b084c80eaa0a50dd1e77672deb404c865bff08cfbee79673aae2b"
 }
