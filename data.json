@@ -3,8 +3,8 @@
   "mode": "snapshot",
   "summary": {
     "total": 13,
-    "done": 7,
-    "in_progress": 6,
+    "done": 9,
+    "in_progress": 4,
     "failed": 0,
     "missing": 0
   },
@@ -13,8 +13,8 @@
       "name": "Тема 4",
       "number": 4,
       "total": 9,
-      "done": 7,
-      "in_progress": 2,
+      "done": 8,
+      "in_progress": 1,
       "failed": 0,
       "missing": 0
     },
@@ -22,8 +22,8 @@
       "name": "Тема 5",
       "number": 5,
       "total": 4,
-      "done": 0,
-      "in_progress": 4,
+      "done": 1,
+      "in_progress": 3,
       "failed": 0,
       "missing": 0
     }
@@ -54,28 +54,6 @@
       ],
       "png_size": 1255989,
       "blend_size": 1935605
-    },
-    {
-      "id": "T4_PR7",
-      "full_id": "T4_PR7_SHELF",
-      "theme": "Тема 4",
-      "theme_number": 4,
-      "name": "PR7_Shelf",
-      "status": "in_progress",
-      "status_source": "override",
-      "has_blend": true,
-      "has_png": true,
-      "blend_mtime": "2026-11-25T02:20:07+03:00",
-      "blend_mtime_ts": 1795562407.4848554,
-      "png_mtime": "2026-11-25T02:20:43+03:00",
-      "png_mtime_ts": 1795562443.1456552,
-      "png_newer": true,
-      "preview_url": "previews/t4_pr7_shelf.png",
-      "note": "Идёт переделка «ровной» версии полки.",
-      "agent": "builder-7",
-      "warnings": [],
-      "png_size": 1420628,
-      "blend_size": 103017
     },
     {
       "id": "T4_PR2",
@@ -220,6 +198,28 @@
       "blend_size": 193004
     },
     {
+      "id": "T4_PR7",
+      "full_id": "T4_PR7_SHELF",
+      "theme": "Тема 4",
+      "theme_number": 4,
+      "name": "PR7_Shelf",
+      "status": "done",
+      "status_source": "override",
+      "has_blend": true,
+      "has_png": true,
+      "blend_mtime": "2026-11-25T02:20:07+03:00",
+      "blend_mtime_ts": 1795562407.4848554,
+      "png_mtime": "2026-11-25T02:20:43+03:00",
+      "png_mtime_ts": 1795562443.1456552,
+      "png_newer": true,
+      "preview_url": "previews/t4_pr7_shelf.png",
+      "note": "Утверждён пользователем; независимая проверка PASS WITH NOTES (полки ровные, рамы без зазоров).",
+      "agent": "builder-7",
+      "warnings": [],
+      "png_size": 1420628,
+      "blend_size": 103017
+    },
+    {
       "id": "T4_PR8",
       "full_id": "T4_PR8_LEMON",
       "theme": "Тема 4",
@@ -240,28 +240,6 @@
       "warnings": [],
       "png_size": 2879386,
       "blend_size": 142151
-    },
-    {
-      "id": "T5_PR1_CANDLESTICK",
-      "full_id": "T5_PR1_CANDLESTICK",
-      "theme": "Тема 5",
-      "theme_number": 5,
-      "name": "PR1_Candlestick",
-      "status": "in_progress",
-      "status_source": "override",
-      "has_blend": true,
-      "has_png": true,
-      "blend_mtime": "2026-11-25T02:54:56+03:00",
-      "blend_mtime_ts": 1795564496.549329,
-      "png_mtime": "2026-11-25T02:55:04+03:00",
-      "png_mtime_ts": 1795564504.994207,
-      "png_newer": true,
-      "preview_url": "previews/t5_pr1_candlestick.png",
-      "note": "В работе, ожидает проверки.",
-      "agent": null,
-      "warnings": [],
-      "png_size": 836271,
-      "blend_size": 119145
     },
     {
       "id": "T5_PR1_CAT",
@@ -328,14 +306,36 @@
       "warnings": [],
       "png_size": 692330,
       "blend_size": 1319142
+    },
+    {
+      "id": "T5_PR1_CANDLESTICK",
+      "full_id": "T5_PR1_CANDLESTICK",
+      "theme": "Тема 5",
+      "theme_number": 5,
+      "name": "PR1_Candlestick",
+      "status": "done",
+      "status_source": "override",
+      "has_blend": true,
+      "has_png": true,
+      "blend_mtime": "2026-11-25T02:54:56+03:00",
+      "blend_mtime_ts": 1795564496.549329,
+      "png_mtime": "2026-11-25T02:55:04+03:00",
+      "png_mtime_ts": 1795564504.994207,
+      "png_newer": true,
+      "preview_url": "previews/t5_pr1_candlestick.png",
+      "note": "PASS WITH NOTES: профиль, Винт 360°/16×16, посадка свечи и фитиль приняты; остались косметические замечания.",
+      "agent": "builder-1",
+      "warnings": [],
+      "png_size": 836271,
+      "blend_size": 119145
     }
   ],
   "warnings": [],
-  "status_updated_at": "2026-11-25T02:40:20+03:00",
+  "status_updated_at": "2026-11-25T03:02:30+03:00",
   "diagnostics": {
     "workmcp": "workMCP",
     "status_file": "status.json",
-    "status_updated_at": "2026-11-25T02:40:20+03:00",
+    "status_updated_at": "2026-11-25T03:02:30+03:00",
     "scan_error": null,
     "status_error": null,
     "problems": [],
@@ -352,7 +352,7 @@
     "orphan_pngs": [],
     "unmatched_status_keys": []
   },
-  "generated_at": "2026-11-25T02:59:42+03:00",
-  "snapshot_at": "2026-11-25T02:59:42+03:00",
-  "content_hash": "3a29fc980c6d2dfe0a6c370b2e3796c5a4349c5d14f728b3c9012a4878cf5295"
+  "generated_at": "2026-11-25T03:00:18+03:00",
+  "snapshot_at": "2026-11-25T03:00:18+03:00",
+  "content_hash": "74d27ae8c277e3be88fad55ea3864306bdccbe243fc9db6f5eb152826f2dfddb"
 }
