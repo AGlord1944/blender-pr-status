@@ -403,7 +403,7 @@
       "png_mtime_ts": 1795572703.3800273,
       "png_newer": true,
       "preview_url": "previews/t5_pr1_cat_v3.png",
-      "note": "Третий проход по морде: свежая диагностика, глаза/зрачок/усы, новая версия v3; v2 не перезаписывается",
+      "note": "v3 собрана: усы 3+3 (bevel 0.014, корни ±0.105/0.145/0.185, кончик 40%), зрачок 0.018×0.0405 h/w 2.25, глаз v2_fix 20°/0.1511×0.0602; тело/хвост/камера/свет/фон без изменений; 1080/192; ждёт независимой проверки",
       "agent": "cat-v3",
       "warnings": [],
       "png_size": 1004846,
@@ -507,8 +507,8 @@
       "status_source": "override",
       "has_blend": true,
       "has_png": false,
-      "blend_mtime": "2026-11-25T05:09:59+03:00",
-      "blend_mtime_ts": 1795572599.411369,
+      "blend_mtime": "2026-11-25T05:14:40+03:00",
+      "blend_mtime_ts": 1795572880.1532183,
       "png_mtime": null,
       "png_mtime_ts": null,
       "png_newer": null,
@@ -519,7 +519,7 @@
         "no_png"
       ],
       "png_size": null,
-      "blend_size": 196850
+      "blend_size": 196863
     },
     {
       "id": "T6_PR2_1_BASKET",
@@ -681,11 +681,11 @@
     }
   ],
   "warnings": [],
-  "status_updated_at": "2026-11-25T05:04:55+03:00",
+  "status_updated_at": "2026-11-25T05:13:54+03:00",
   "diagnostics": {
     "workmcp": "workMCP",
     "status_file": "status.json",
-    "status_updated_at": "2026-11-25T05:04:55+03:00",
+    "status_updated_at": "2026-11-25T05:13:54+03:00",
     "scan_error": null,
     "status_error": null,
     "problems": [],
@@ -702,7 +702,7 @@
     "orphan_pngs": [],
     "unmatched_status_keys": []
   },
-  "generated_at": "2026-11-25T05:12:41+03:00",
-  "snapshot_at": "2026-11-25T05:12:41+03:00",
-  "content_hash": "8fac4f5e7c2df9a077c38be54d86d958fad14a5d140f2855ff37ec3d52088d4f"
+  "generated_at": "2026-11-25T05:15:23+03:00",
+  "snapshot_at": "2026-11-25T05:15:23+03:00",
+  "content_hash": "73705c60c454e80db8ac7ca45e05955bc4cfa45593f79134245f384f0e69bab9"
 }
