@@ -507,8 +507,8 @@
       "status_source": "override",
       "has_blend": true,
       "has_png": false,
-      "blend_mtime": "2026-11-25T05:14:40+03:00",
-      "blend_mtime_ts": 1795572880.1532183,
+      "blend_mtime": "2026-11-25T05:18:17+03:00",
+      "blend_mtime_ts": 1795573097.5739286,
       "png_mtime": null,
       "png_mtime_ts": null,
       "png_newer": null,
@@ -519,7 +519,7 @@
         "no_png"
       ],
       "png_size": null,
-      "blend_size": 196863
+      "blend_size": 196889
     },
     {
       "id": "T6_PR2_1_BASKET",
@@ -702,7 +702,7 @@
     "orphan_pngs": [],
     "unmatched_status_keys": []
   },
-  "generated_at": "2026-11-25T05:15:23+03:00",
-  "snapshot_at": "2026-11-25T05:15:23+03:00",
-  "content_hash": "73705c60c454e80db8ac7ca45e05955bc4cfa45593f79134245f384f0e69bab9"
+  "generated_at": "2026-11-25T05:18:23+03:00",
+  "snapshot_at": "2026-11-25T05:18:23+03:00",
+  "content_hash": "36b369eff16fe014b32e62fe9af6c59221f30372d8534791a9c587faeb85da7f"
 }
