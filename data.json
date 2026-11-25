@@ -97,8 +97,8 @@
       "status_source": "override",
       "has_blend": true,
       "has_png": false,
-      "blend_mtime": "2026-11-25T05:24:16+03:00",
-      "blend_mtime_ts": 1795573456.9719262,
+      "blend_mtime": "2026-11-25T05:27:00+03:00",
+      "blend_mtime_ts": 1795573620.7972214,
       "png_mtime": null,
       "png_mtime_ts": null,
       "png_newer": null,
@@ -111,7 +111,7 @@
         "temp_preview"
       ],
       "png_size": null,
-      "blend_size": 64542202
+      "blend_size": 64803684
     },
     {
       "id": "T4_PR2",
@@ -507,17 +507,17 @@
       "status_source": "override",
       "has_blend": true,
       "has_png": true,
-      "blend_mtime": "2026-11-25T05:22:09+03:00",
-      "blend_mtime_ts": 1795573329.3610163,
-      "png_mtime": "2026-11-25T05:22:16+03:00",
-      "png_mtime_ts": 1795573336.8807416,
+      "blend_mtime": "2026-11-25T05:24:51+03:00",
+      "blend_mtime_ts": 1795573491.131954,
+      "png_mtime": "2026-11-25T05:24:57+03:00",
+      "png_mtime_ts": 1795573497.1117496,
       "png_newer": true,
       "preview_url": "previews/t6_pr1_3_pillows_v2.png",
       "note": "Собран: сцена и рендер есть, ждёт независимой проверки (PASS нет).",
       "agent": "builder-t6",
       "warnings": [],
-      "png_size": 930221,
-      "blend_size": 198775
+      "png_size": 930561,
+      "blend_size": 198795
     },
     {
       "id": "T6_PR2_1_BASKET",
@@ -700,7 +700,7 @@
     "orphan_pngs": [],
     "unmatched_status_keys": []
   },
-  "generated_at": "2026-11-25T05:24:30+03:00",
-  "snapshot_at": "2026-11-25T05:24:30+03:00",
-  "content_hash": "fe879a9fe451d6f08bcc8c80c510f0ae364b1cfceae0efff3dbfee5be5c22ad6"
+  "generated_at": "2026-11-25T05:27:25+03:00",
+  "snapshot_at": "2026-11-25T05:27:25+03:00",
+  "content_hash": "ef16519dd3cb18582d7476df6a8def8d852787a2a1f10253d0aa1e4f94d01d46"
 }
