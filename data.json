@@ -466,8 +466,8 @@
       "status_source": "override",
       "has_blend": true,
       "has_png": false,
-      "blend_mtime": "2026-11-25T04:13:01+03:00",
-      "blend_mtime_ts": 1795569181.9744363,
+      "blend_mtime": "2026-11-25T04:36:05+03:00",
+      "blend_mtime_ts": 1795570565.65047,
       "png_mtime": null,
       "png_mtime_ts": null,
       "png_newer": null,
@@ -479,7 +479,7 @@
         "blend1"
       ],
       "png_size": null,
-      "blend_size": 8703598
+      "blend_size": 179353
     },
     {
       "id": "T6_PR1_2_TOWEL",
@@ -664,7 +664,7 @@
     "orphan_pngs": [],
     "unmatched_status_keys": []
   },
-  "generated_at": "2026-11-25T04:36:03+03:00",
-  "snapshot_at": "2026-11-25T04:36:03+03:00",
-  "content_hash": "6cd0d0925f43d93d692b5721df842825f93b03e2a53e636241d89285081ad63e"
+  "generated_at": "2026-11-25T04:36:10+03:00",
+  "snapshot_at": "2026-11-25T04:36:10+03:00",
+  "content_hash": "8cf276d79d7546cc8f9d3625e02a60eb35afec44f18b66f84cc9fdb2d2ad3489"
 }
