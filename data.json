@@ -3,8 +3,8 @@
   "mode": "snapshot",
   "summary": {
     "total": 13,
-    "done": 9,
-    "in_progress": 4,
+    "done": 10,
+    "in_progress": 3,
     "failed": 0,
     "missing": 0
   },
@@ -22,8 +22,8 @@
       "name": "Тема 5",
       "number": 5,
       "total": 4,
-      "done": 1,
-      "in_progress": 3,
+      "done": 2,
+      "in_progress": 2,
       "failed": 0,
       "missing": 0
     }
@@ -251,20 +251,19 @@
       "status_source": "override",
       "has_blend": true,
       "has_png": true,
-      "blend_mtime": "2026-11-25T03:32:43+03:00",
-      "blend_mtime_ts": 1795566763.1432412,
-      "png_mtime": "2026-11-25T03:32:31+03:00",
-      "png_mtime_ts": 1795566751.2469912,
-      "png_newer": false,
+      "blend_mtime": "2026-11-25T03:33:37+03:00",
+      "blend_mtime_ts": 1795566817.4247823,
+      "png_mtime": "2026-11-25T03:34:03+03:00",
+      "png_mtime_ts": 1795566843.1865654,
+      "png_newer": true,
       "preview_url": "previews/t5_pr1_cat.png",
       "note": "В работе, ожидает проверки.",
       "agent": null,
       "warnings": [
-        "png_older",
         "blend1"
       ],
-      "png_size": 1002749,
-      "blend_size": 258458
+      "png_size": 1008249,
+      "blend_size": 258452
     },
     {
       "id": "T5_PR1_SKIRTING",
@@ -289,28 +288,6 @@
       "blend_size": 97168
     },
     {
-      "id": "T5_PR2",
-      "full_id": "T5_PR2_CANDLE",
-      "theme": "Тема 5",
-      "theme_number": 5,
-      "name": "PR2_Candle",
-      "status": "in_progress",
-      "status_source": "override",
-      "has_blend": true,
-      "has_png": true,
-      "blend_mtime": "2026-11-25T03:27:34+03:00",
-      "blend_mtime_ts": 1795566454.529735,
-      "png_mtime": "2026-11-25T03:27:42+03:00",
-      "png_mtime_ts": 1795566462.2064552,
-      "png_newer": true,
-      "preview_url": "previews/t5_pr2_candle.png",
-      "note": "Переделка после FAIL.",
-      "agent": "builder-candle",
-      "warnings": [],
-      "png_size": 688426,
-      "blend_size": 1304475
-    },
-    {
       "id": "T5_PR1_CANDLESTICK",
       "full_id": "T5_PR1_CANDLESTICK",
       "theme": "Тема 5",
@@ -331,14 +308,36 @@
       "warnings": [],
       "png_size": 836271,
       "blend_size": 119145
+    },
+    {
+      "id": "T5_PR2",
+      "full_id": "T5_PR2_CANDLE",
+      "theme": "Тема 5",
+      "theme_number": 5,
+      "name": "PR2_Candle",
+      "status": "done",
+      "status_source": "override",
+      "has_blend": true,
+      "has_png": true,
+      "blend_mtime": "2026-11-25T03:27:34+03:00",
+      "blend_mtime_ts": 1795566454.529735,
+      "png_mtime": "2026-11-25T03:27:42+03:00",
+      "png_mtime_ts": 1795566462.2064552,
+      "png_newer": true,
+      "preview_url": "previews/t5_pr2_candle.png",
+      "note": "PASS: свеча замкнута, ободок/впадина/потёки, фитиль-кривая, пламя-плоскость, свет с Track To; остались только notes.",
+      "agent": "builder-candle",
+      "warnings": [],
+      "png_size": 688426,
+      "blend_size": 1304475
     }
   ],
   "warnings": [],
-  "status_updated_at": "2026-11-25T03:02:30+03:00",
+  "status_updated_at": "2026-11-25T03:30:30+03:00",
   "diagnostics": {
     "workmcp": "workMCP",
     "status_file": "status.json",
-    "status_updated_at": "2026-11-25T03:02:30+03:00",
+    "status_updated_at": "2026-11-25T03:30:30+03:00",
     "scan_error": null,
     "status_error": null,
     "problems": [],
@@ -355,7 +354,7 @@
     "orphan_pngs": [],
     "unmatched_status_keys": []
   },
-  "generated_at": "2026-11-25T03:33:02+03:00",
-  "snapshot_at": "2026-11-25T03:33:02+03:00",
-  "content_hash": "a046c22a3eff6e5170ef555382fa06b27b0d1cca28fddf4386707449f69c9753"
+  "generated_at": "2026-11-25T03:34:04+03:00",
+  "snapshot_at": "2026-11-25T03:34:04+03:00",
+  "content_hash": "44663aa1f99dec33bdf2379783469218ce5bba4c1e7c63b8e0df8279dab137f5"
 }
