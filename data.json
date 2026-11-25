@@ -397,17 +397,17 @@
       "status_source": "override",
       "has_blend": true,
       "has_png": true,
-      "blend_mtime": "2026-11-25T05:04:05+03:00",
-      "blend_mtime_ts": 1795572245.2514143,
-      "png_mtime": "2026-11-25T05:06:52+03:00",
-      "png_mtime_ts": 1795572412.1985095,
+      "blend_mtime": "2026-11-25T05:11:09+03:00",
+      "blend_mtime_ts": 1795572669.9460833,
+      "png_mtime": "2026-11-25T05:11:43+03:00",
+      "png_mtime_ts": 1795572703.3800273,
       "png_newer": true,
       "preview_url": "previews/t5_pr1_cat_v3.png",
       "note": "Третий проход по морде: свежая диагностика, глаза/зрачок/усы, новая версия v3; v2 не перезаписывается",
       "agent": "cat-v3",
       "warnings": [],
-      "png_size": 1004810,
-      "blend_size": 264581
+      "png_size": 1004846,
+      "blend_size": 264358
     },
     {
       "id": "T5_PR1_CANDLESTICK",
@@ -507,8 +507,8 @@
       "status_source": "override",
       "has_blend": true,
       "has_png": false,
-      "blend_mtime": "2026-11-25T05:08:25+03:00",
-      "blend_mtime_ts": 1795572505.8521194,
+      "blend_mtime": "2026-11-25T05:09:59+03:00",
+      "blend_mtime_ts": 1795572599.411369,
       "png_mtime": null,
       "png_mtime_ts": null,
       "png_newer": null,
@@ -519,7 +519,7 @@
         "no_png"
       ],
       "png_size": null,
-      "blend_size": 196874
+      "blend_size": 196850
     },
     {
       "id": "T6_PR2_1_BASKET",
@@ -702,7 +702,7 @@
     "orphan_pngs": [],
     "unmatched_status_keys": []
   },
-  "generated_at": "2026-11-25T05:09:44+03:00",
-  "snapshot_at": "2026-11-25T05:09:44+03:00",
-  "content_hash": "ff0332480b02129740864b8cca45876a123c40aa3ae4ea8944ad3fa1319e3c87"
+  "generated_at": "2026-11-25T05:12:41+03:00",
+  "snapshot_at": "2026-11-25T05:12:41+03:00",
+  "content_hash": "8fac4f5e7c2df9a077c38be54d86d958fad14a5d140f2855ff37ec3d52088d4f"
 }
