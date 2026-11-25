@@ -121,19 +121,21 @@
       "status_source": "override",
       "has_blend": true,
       "has_png": true,
-      "blend_mtime": "2026-11-25T06:28:41+03:00",
-      "blend_mtime_ts": 1795577321.390615,
+      "blend_mtime": "2026-11-25T06:33:19+03:00",
+      "blend_mtime_ts": 1795577599.5363948,
       "png_mtime": "2026-11-25T06:29:27+03:00",
       "png_mtime_ts": 1795577367.9630444,
-      "png_newer": true,
+      "png_newer": false,
       "preview_url": "previews/t4_pr6_boat_scene_v11.png",
       "note": "Файл пользователя; рендер старше сцены. Переделка идёт в PR6_v2 (4 части).",
       "agent": "user",
       "warnings": [
+        "png_older",
+        "blend1",
         "temp_preview"
       ],
       "png_size": 1267597,
-      "blend_size": 64509062
+      "blend_size": 64509728
     },
     {
       "id": "T4_PR6_BOAT_SCENE_V3",
@@ -912,7 +914,7 @@
     "orphan_pngs": [],
     "unmatched_status_keys": []
   },
-  "generated_at": "2026-11-25T06:30:34+03:00",
-  "snapshot_at": "2026-11-25T06:30:34+03:00",
-  "content_hash": "ee1303a81ca09317bd5bce2e9a1d4d33aec9b6536b2039686256f436e1fee4da"
+  "generated_at": "2026-11-25T06:33:55+03:00",
+  "snapshot_at": "2026-11-25T06:33:55+03:00",
+  "content_hash": "9fd36e87e4c58e8d29d7dc2a39056ba58411d06bf634f2057ca6abe20777990f"
 }
