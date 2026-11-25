@@ -4,9 +4,9 @@
   "summary": {
     "total": 24,
     "done": 11,
-    "in_progress": 5,
+    "in_progress": 7,
     "failed": 0,
-    "missing": 8
+    "missing": 6
   },
   "themes": [
     {
@@ -32,9 +32,9 @@
       "number": 6,
       "total": 8,
       "done": 0,
-      "in_progress": 0,
+      "in_progress": 2,
       "failed": 0,
-      "missing": 8
+      "missing": 6
     }
   ],
   "works": [
@@ -47,20 +47,18 @@
       "status": "in_progress",
       "status_source": "override",
       "has_blend": true,
-      "has_png": false,
-      "blend_mtime": "2026-11-14T20:15:08+03:00",
-      "blend_mtime_ts": 1794676508.6642272,
-      "png_mtime": null,
-      "png_mtime_ts": null,
-      "png_newer": null,
-      "preview_url": null,
-      "note": "Отверстия ближе к центру (x=±0.44) и крупнее (R=0.14), как на #20; сборка на копии PR2_2_Button_v2",
+      "has_png": true,
+      "blend_mtime": "2026-11-25T04:12:13+03:00",
+      "blend_mtime_ts": 1795569133.768822,
+      "png_mtime": "2026-11-25T04:12:43+03:00",
+      "png_mtime_ts": 1795569163.4128995,
+      "png_newer": true,
+      "preview_url": "previews/t4_pr2_2_button_v2.png",
+      "note": "Собран: отверстия ближе к центру (x=±0.44) и крупнее (R=0.14), как на #20; рендер новее сцены, ждёт независимой проверки (PASS нет).",
       "agent": "button-fix",
-      "warnings": [
-        "no_png"
-      ],
-      "png_size": null,
-      "blend_size": 303771
+      "warnings": [],
+      "png_size": 1586332,
+      "blend_size": 313600
     },
     {
       "id": "T4_PR6",
@@ -78,7 +76,7 @@
       "png_mtime_ts": 1795559842.0769498,
       "png_newer": false,
       "preview_url": "previews/t4_pr6_boat_scene.png",
-      "note": "Пользователь доделывает сцену с лодкой сам.",
+      "note": "Файл пользователя; рендер старше сцены. Переделка идёт в PR6_v2 (4 части).",
       "agent": "user",
       "warnings": [
         "png_older",
@@ -104,7 +102,7 @@
       "png_mtime_ts": null,
       "png_newer": null,
       "preview_url": null,
-      "note": "Переделка сцены с лодкой: 4 части (вода/песок/трава, лодка, пальмы/камни, студия); файл пользователя сохранён в PR6_v2/user_backup",
+      "note": "Переделка сцены с лодкой: 4 части (вода/песок/трава, лодка, пальмы/камни, студия) в Тема 4/PR6_v2/parts; общий рендер ещё не собран; файл пользователя сохранён в PR6_v2/user_backup",
       "agent": "pr6-wave",
       "warnings": [
         "no_files"
@@ -331,21 +329,18 @@
       "status": "in_progress",
       "status_source": "override",
       "has_blend": true,
-      "has_png": false,
-      "blend_mtime": "2026-11-25T03:57:35+03:00",
-      "blend_mtime_ts": 1795568255.5444264,
-      "png_mtime": null,
-      "png_mtime_ts": null,
-      "png_newer": null,
-      "preview_url": null,
-      "note": "Исправление морды: глаза меньше и правильной формы, усы чёрные и толще; сборка на копии PR1_Cat_v2",
+      "has_png": true,
+      "blend_mtime": "2026-11-25T04:04:23+03:00",
+      "blend_mtime_ts": 1795568663.254691,
+      "png_mtime": "2026-11-25T04:04:54+03:00",
+      "png_mtime_ts": 1795568694.132801,
+      "png_newer": true,
+      "preview_url": "previews/t5_pr1_cat_v2.png",
+      "note": "Собран: глаза меньше и правильной формы, усы чёрные и толще; рендер новее сцены, ждёт независимой проверки.",
       "agent": "cat-fix",
-      "warnings": [
-        "no_png",
-        "blend1"
-      ],
-      "png_size": null,
-      "blend_size": 257985
+      "warnings": [],
+      "png_size": 1006007,
+      "blend_size": 257975
     },
     {
       "id": "T5_PR1_CANDLESTICK",
@@ -418,24 +413,49 @@
       "full_id": "T6_PR1_1_CLOTH_VASE",
       "theme": "Тема 6",
       "theme_number": 6,
-      "name": "PR1_1_CLOTH_VASE",
-      "status": "missing",
+      "name": "PR1_1_Cloth_Vase",
+      "status": "in_progress",
       "status_source": "override",
-      "has_blend": false,
+      "has_blend": true,
       "has_png": false,
-      "blend_mtime": null,
-      "blend_mtime_ts": null,
+      "blend_mtime": "2026-11-25T04:13:01+03:00",
+      "blend_mtime_ts": 1795569181.9744363,
       "png_mtime": null,
       "png_mtime_ts": null,
       "png_newer": null,
       "preview_url": null,
-      "note": "Запланировано; спецификация T6_SPEC.md готова, сборка не начата",
-      "agent": "spec",
+      "note": "Сборка начата: файл сцены создан, рендера пока нет; спецификация T6_SPEC.md.",
+      "agent": "builder-t6",
       "warnings": [
-        "no_files"
+        "no_png",
+        "blend1"
       ],
       "png_size": null,
-      "blend_size": null
+      "blend_size": 8703598
+    },
+    {
+      "id": "T6_PR1_4_POUF",
+      "full_id": "T6_PR1_4_POUF",
+      "theme": "Тема 6",
+      "theme_number": 6,
+      "name": "PR1_4_Pouf",
+      "status": "in_progress",
+      "status_source": "override",
+      "has_blend": true,
+      "has_png": false,
+      "blend_mtime": "2026-11-25T04:13:21+03:00",
+      "blend_mtime_ts": 1795569201.4926875,
+      "png_mtime": null,
+      "png_mtime_ts": null,
+      "png_newer": null,
+      "preview_url": null,
+      "note": "Сборка начата: файл сцены создан, рендера пока нет; спецификация T6_SPEC.md.",
+      "agent": "builder-t6",
+      "warnings": [
+        "no_png"
+      ],
+      "png_size": null,
+      "blend_size": 174550
     },
     {
       "id": "T6_PR1_2_TOWEL",
@@ -467,30 +487,6 @@
       "theme": "Тема 6",
       "theme_number": 6,
       "name": "PR1_3_PILLOWS",
-      "status": "missing",
-      "status_source": "override",
-      "has_blend": false,
-      "has_png": false,
-      "blend_mtime": null,
-      "blend_mtime_ts": null,
-      "png_mtime": null,
-      "png_mtime_ts": null,
-      "png_newer": null,
-      "preview_url": null,
-      "note": "Запланировано; спецификация T6_SPEC.md готова, сборка не начата",
-      "agent": "spec",
-      "warnings": [
-        "no_files"
-      ],
-      "png_size": null,
-      "blend_size": null
-    },
-    {
-      "id": "T6_PR1_4_POUF",
-      "full_id": "T6_PR1_4_POUF",
-      "theme": "Тема 6",
-      "theme_number": 6,
-      "name": "PR1_4_POUF",
       "status": "missing",
       "status_source": "override",
       "has_blend": false,
@@ -562,13 +558,13 @@
       "full_id": "T6_PR2_2_PAPER_ANIMATION",
       "theme": "Тема 6",
       "theme_number": 6,
-      "name": "PR2_2_PAPER_ANIMATION",
+      "name": "PR2_2_Paper_Animation",
       "status": "missing",
       "status_source": "override",
-      "has_blend": false,
+      "has_blend": true,
       "has_png": false,
-      "blend_mtime": null,
-      "blend_mtime_ts": null,
+      "blend_mtime": "2026-11-25T04:14:19+03:00",
+      "blend_mtime_ts": 1795569259.4323485,
       "png_mtime": null,
       "png_mtime_ts": null,
       "png_newer": null,
@@ -576,10 +572,10 @@
       "note": "Запланировано; спецификация T6_SPEC.md готова, сборка не начата",
       "agent": "spec",
       "warnings": [
-        "no_files"
+        "no_png"
       ],
       "png_size": null,
-      "blend_size": null
+      "blend_size": 2978457
     },
     {
       "id": "T6_PR2_2B_PAPER_CRUMPLED",
@@ -607,11 +603,11 @@
     }
   ],
   "warnings": [],
-  "status_updated_at": "2026-11-25T03:58:28+03:00",
+  "status_updated_at": "2026-11-25T04:18:00+03:00",
   "diagnostics": {
     "workmcp": "workMCP",
     "status_file": "status.json",
-    "status_updated_at": "2026-11-25T03:58:28+03:00",
+    "status_updated_at": "2026-11-25T04:18:00+03:00",
     "scan_error": null,
     "status_error": null,
     "problems": [],
@@ -619,22 +615,6 @@
       {
         "path": "Тема 4/lemon_slice_texture.png",
         "reason": "текстура/ассет, а не рендер работы"
-      },
-      {
-        "path": "Тема 5/_face_before.png",
-        "reason": "служебный файл (имя начинается с _)"
-      },
-      {
-        "path": "Тема 5/_prev_v2.png",
-        "reason": "служебный файл (имя начинается с _)"
-      },
-      {
-        "path": "Тема 5/_ref39_face.png",
-        "reason": "служебный файл (имя начинается с _)"
-      },
-      {
-        "path": "Тема 5/_refkt_face.png",
-        "reason": "служебный файл (имя начинается с _)"
       }
     ],
     "temp_previews": [
@@ -644,7 +624,7 @@
     "orphan_pngs": [],
     "unmatched_status_keys": []
   },
-  "generated_at": "2026-11-25T03:58:52+03:00",
-  "snapshot_at": "2026-11-25T03:58:52+03:00",
-  "content_hash": "ea67b7e6759189ca0595161f84fe21d9d360e61e8da27f48aa5a1876ea8d99bf"
+  "generated_at": "2026-11-25T04:15:25+03:00",
+  "snapshot_at": "2026-11-25T04:15:25+03:00",
+  "content_hash": "66235e2d96a748a836c775e43d9e1763b77d07a7a92b4a6aac5bea099f1c134b"
 }
