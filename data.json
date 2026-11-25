@@ -443,8 +443,8 @@
       "status_source": "override",
       "has_blend": true,
       "has_png": false,
-      "blend_mtime": "2026-11-25T04:13:21+03:00",
-      "blend_mtime_ts": 1795569201.4926875,
+      "blend_mtime": "2026-11-25T04:17:22+03:00",
+      "blend_mtime_ts": 1795569442.3421493,
       "png_mtime": null,
       "png_mtime_ts": null,
       "png_newer": null,
@@ -455,7 +455,7 @@
         "no_png"
       ],
       "png_size": null,
-      "blend_size": 174550
+      "blend_size": 174486
     },
     {
       "id": "T6_PR1_2_TOWEL",
@@ -582,13 +582,13 @@
       "full_id": "T6_PR2_2B_PAPER_CRUMPLED",
       "theme": "Тема 6",
       "theme_number": 6,
-      "name": "PR2_2B_PAPER_CRUMPLED",
+      "name": "PR2_2b_Paper_Crumpled",
       "status": "missing",
       "status_source": "override",
-      "has_blend": false,
+      "has_blend": true,
       "has_png": false,
-      "blend_mtime": null,
-      "blend_mtime_ts": null,
+      "blend_mtime": "2026-11-25T04:17:19+03:00",
+      "blend_mtime_ts": 1795569439.2356882,
       "png_mtime": null,
       "png_mtime_ts": null,
       "png_newer": null,
@@ -596,18 +596,18 @@
       "note": "Запланировано; спецификация T6_SPEC.md готова, сборка не начата",
       "agent": "spec",
       "warnings": [
-        "no_files"
+        "no_png"
       ],
       "png_size": null,
-      "blend_size": null
+      "blend_size": 469424
     }
   ],
   "warnings": [],
-  "status_updated_at": "2026-11-25T04:21:30+03:00",
+  "status_updated_at": "2026-11-25T04:17:22+03:00",
   "diagnostics": {
     "workmcp": "workMCP",
     "status_file": "status.json",
-    "status_updated_at": "2026-11-25T04:21:30+03:00",
+    "status_updated_at": "2026-11-25T04:17:22+03:00",
     "scan_error": null,
     "status_error": null,
     "problems": [],
@@ -624,7 +624,7 @@
     "orphan_pngs": [],
     "unmatched_status_keys": []
   },
-  "generated_at": "2026-11-25T04:16:40+03:00",
-  "snapshot_at": "2026-11-25T04:16:40+03:00",
-  "content_hash": "3f9f6742a3c4f3dd784ac1c078235743b260a6753ca8bd41380700a4cc4d3591"
+  "generated_at": "2026-11-25T04:17:38+03:00",
+  "snapshot_at": "2026-11-25T04:17:38+03:00",
+  "content_hash": "8ddb6c3497b6bbebf0908be7d99253b958383580ef13e9a176e7d3e7d81e4123"
 }
