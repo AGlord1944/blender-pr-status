@@ -2,9 +2,9 @@
   "ok": true,
   "mode": "snapshot",
   "summary": {
-    "total": 26,
+    "total": 27,
     "done": 14,
-    "in_progress": 11,
+    "in_progress": 12,
     "failed": 1,
     "missing": 0
   },
@@ -12,9 +12,9 @@
     {
       "name": "Тема 4",
       "number": 4,
-      "total": 11,
+      "total": 12,
       "done": 9,
-      "in_progress": 2,
+      "in_progress": 3,
       "failed": 0,
       "missing": 0
     },
@@ -86,6 +86,31 @@
       ],
       "png_size": 1400391,
       "blend_size": 64466261
+    },
+    {
+      "id": "T4_PR6",
+      "full_id": "T4_PR6_BOAT_SCENE_V3",
+      "theme": "Тема 4",
+      "theme_number": 4,
+      "name": "PR6_Boat_Scene_v3",
+      "status": "in_progress",
+      "status_source": "override",
+      "has_blend": true,
+      "has_png": false,
+      "blend_mtime": "2026-11-25T05:03:00+03:00",
+      "blend_mtime_ts": 1795572180.246101,
+      "png_mtime": null,
+      "png_mtime_ts": null,
+      "png_newer": null,
+      "preview_url": null,
+      "note": "Файл пользователя; рендер старше сцены. Переделка идёт в PR6_v2 (4 части).",
+      "agent": "user",
+      "warnings": [
+        "no_png",
+        "temp_preview"
+      ],
+      "png_size": null,
+      "blend_size": 64466991
     },
     {
       "id": "T4_PR2",
@@ -371,8 +396,8 @@
       "status_source": "override",
       "has_blend": true,
       "has_png": false,
-      "blend_mtime": "2026-11-25T04:58:43+03:00",
-      "blend_mtime_ts": 1795571923.4486737,
+      "blend_mtime": "2026-11-25T05:02:14+03:00",
+      "blend_mtime_ts": 1795572134.6254368,
       "png_mtime": null,
       "png_mtime_ts": null,
       "png_newer": null,
@@ -383,7 +408,7 @@
         "no_png"
       ],
       "png_size": null,
-      "blend_size": 264628
+      "blend_size": 264573
     },
     {
       "id": "T5_PR1_CANDLESTICK",
@@ -654,7 +679,7 @@
     "orphan_pngs": [],
     "unmatched_status_keys": []
   },
-  "generated_at": "2026-11-25T05:00:22+03:00",
-  "snapshot_at": "2026-11-25T05:00:22+03:00",
-  "content_hash": "69ee6648e90335479dbbd9463b1904f4115e75c8c7b11864fb2c7d3522d86a1c"
+  "generated_at": "2026-11-25T05:03:26+03:00",
+  "snapshot_at": "2026-11-25T05:03:26+03:00",
+  "content_hash": "8a5168bd118e5e0db07e66c915b4e31475bf0511812e4be17b324c281112fb80"
 }
