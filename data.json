@@ -4,9 +4,9 @@
   "summary": {
     "total": 24,
     "done": 11,
-    "in_progress": 11,
+    "in_progress": 12,
     "failed": 0,
-    "missing": 2
+    "missing": 1
   },
   "themes": [
     {
@@ -32,9 +32,9 @@
       "number": 6,
       "total": 8,
       "done": 0,
-      "in_progress": 6,
+      "in_progress": 7,
       "failed": 0,
-      "missing": 2
+      "missing": 1
     }
   ],
   "works": [
@@ -478,6 +478,28 @@
       "blend_size": 174486
     },
     {
+      "id": "T6_PR1_5_CURTAIN",
+      "full_id": "T6_PR1_5_CURTAIN",
+      "theme": "Тема 6",
+      "theme_number": 6,
+      "name": "PR1_5_Curtain",
+      "status": "in_progress",
+      "status_source": "override",
+      "has_blend": true,
+      "has_png": true,
+      "blend_mtime": "2026-11-25T04:25:51+03:00",
+      "blend_mtime_ts": 1795569951.2458673,
+      "png_mtime": "2026-11-25T04:26:08+03:00",
+      "png_mtime_ts": 1795569968.8167224,
+      "png_newer": true,
+      "preview_url": "previews/t6_pr1_5_curtain.png",
+      "note": "Собран: сцена и рендер есть, ждёт независимой проверки (PASS нет).",
+      "agent": "builder-t6",
+      "warnings": [],
+      "png_size": 1154646,
+      "blend_size": 800129
+    },
+    {
       "id": "T6_PR2_1_BASKET",
       "full_id": "T6_PR2_1_BASKET",
       "theme": "Тема 6",
@@ -517,7 +539,7 @@
       "png_mtime_ts": null,
       "png_newer": null,
       "preview_url": null,
-      "note": "Сборка начата: файл сцены создан, рендера пока нет; спецификация T6_SPEC.md.",
+      "note": "Сцена есть, MKV-рендер 0 байт (не завершён); ждёт проверки.",
       "agent": "builder-t6",
       "warnings": [
         "no_png"
@@ -565,43 +587,21 @@
       "png_mtime_ts": null,
       "png_newer": null,
       "preview_url": null,
-      "note": "Запланировано; спецификация T6_SPEC.md готова, сборка не начата",
+      "note": "Запланировано; файлов сцены и рендера в Тема 6 пока нет.",
       "agent": "spec",
       "warnings": [
         "no_files"
       ],
       "png_size": null,
       "blend_size": null
-    },
-    {
-      "id": "T6_PR1_5_CURTAIN",
-      "full_id": "T6_PR1_5_CURTAIN",
-      "theme": "Тема 6",
-      "theme_number": 6,
-      "name": "PR1_5_Curtain",
-      "status": "missing",
-      "status_source": "override",
-      "has_blend": true,
-      "has_png": true,
-      "blend_mtime": "2026-11-25T04:25:51+03:00",
-      "blend_mtime_ts": 1795569951.2458673,
-      "png_mtime": "2026-11-25T04:26:08+03:00",
-      "png_mtime_ts": 1795569968.8167224,
-      "png_newer": true,
-      "preview_url": "previews/t6_pr1_5_curtain.png",
-      "note": "Запланировано; спецификация T6_SPEC.md готова, сборка не начата",
-      "agent": "spec",
-      "warnings": [],
-      "png_size": 1154646,
-      "blend_size": 800129
     }
   ],
   "warnings": [],
-  "status_updated_at": "2026-11-25T04:22:56+03:00",
+  "status_updated_at": "2026-11-25T04:29:51+03:00",
   "diagnostics": {
     "workmcp": "workMCP",
     "status_file": "status.json",
-    "status_updated_at": "2026-11-25T04:22:56+03:00",
+    "status_updated_at": "2026-11-25T04:29:51+03:00",
     "scan_error": null,
     "status_error": null,
     "problems": [],
@@ -618,7 +618,7 @@
     "orphan_pngs": [],
     "unmatched_status_keys": []
   },
-  "generated_at": "2026-11-25T04:27:39+03:00",
-  "snapshot_at": "2026-11-25T04:27:39+03:00",
-  "content_hash": "171cd5af0b52dbd808880a06692f0349bb4cff5f56037f82a482d2344a3ad1dc"
+  "generated_at": "2026-11-25T04:30:25+03:00",
+  "snapshot_at": "2026-11-25T04:30:25+03:00",
+  "content_hash": "37e29279db748856f0a5436dc83d6f71d2ebe7aa8e930a6d07a282b804b30f48"
 }
