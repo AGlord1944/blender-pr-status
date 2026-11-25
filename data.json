@@ -168,21 +168,21 @@
       "status": "in_progress",
       "status_source": "override",
       "has_blend": true,
-      "has_png": false,
-      "blend_mtime": "2026-11-25T05:48:14+03:00",
-      "blend_mtime_ts": 1795574894.4838881,
-      "png_mtime": null,
-      "png_mtime_ts": null,
-      "png_newer": null,
-      "preview_url": null,
+      "has_png": true,
+      "blend_mtime": "2026-11-25T05:50:30+03:00",
+      "blend_mtime_ts": 1795575030.386095,
+      "png_mtime": "2026-11-25T05:51:14+03:00",
+      "png_mtime_ts": 1795575074.6638296,
+      "png_newer": true,
+      "preview_url": "previews/t4_pr6_boat_scene_v6.png",
       "note": "Файл пользователя; рендер старше сцены. Переделка идёт в PR6_v2 (4 части).",
       "agent": "user",
       "warnings": [
-        "no_png",
+        "blend1",
         "temp_preview"
       ],
-      "png_size": null,
-      "blend_size": 64471502
+      "png_size": 1193389,
+      "blend_size": 64475164
     },
     {
       "id": "T4_PR2",
@@ -474,7 +474,7 @@
       "png_mtime_ts": 1795574648.9325266,
       "png_newer": true,
       "preview_url": "previews/t5_pr1_cat_v4.png",
-      "note": "v4: высота линзы 0.068–0.072 при ширине 0.151, ближе к кот.png; v3 не перезаписывается",
+      "note": "v4: линза 0.1608×0.0700, bbox 0.1511×0.0741 (h/w 0.491), рендер 47×26/48×26 (h/w 0.553/0.542; кот.png 0.545), зрачок 0.020×0.050 h/w 2.5; 1080/192; ждёт независимой проверки",
       "agent": "cat-v4",
       "warnings": [],
       "png_size": 1004971,
@@ -772,11 +772,11 @@
     }
   ],
   "warnings": [],
-  "status_updated_at": "2026-11-25T05:31:38+03:00",
+  "status_updated_at": "2026-11-25T05:49:58+03:00",
   "diagnostics": {
     "workmcp": "workMCP",
     "status_file": "status.json",
-    "status_updated_at": "2026-11-25T05:31:38+03:00",
+    "status_updated_at": "2026-11-25T05:49:58+03:00",
     "scan_error": null,
     "status_error": null,
     "problems": [],
@@ -793,7 +793,7 @@
     "orphan_pngs": [],
     "unmatched_status_keys": []
   },
-  "generated_at": "2026-11-25T05:48:39+03:00",
-  "snapshot_at": "2026-11-25T05:48:39+03:00",
-  "content_hash": "d33aaf4ba8845a5119bab0473a2b5a19acb404dc9e09d7a7ff03a55e9152c965"
+  "generated_at": "2026-11-25T05:51:37+03:00",
+  "snapshot_at": "2026-11-25T05:51:37+03:00",
+  "content_hash": "966d5945ff8164b18f277274a4c3f29db00513219fa1954f926fa0539bec7078"
 }
