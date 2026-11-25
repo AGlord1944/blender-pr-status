@@ -461,19 +461,17 @@
       "status": "in_progress",
       "status_source": "override",
       "has_blend": true,
-      "has_png": false,
+      "has_png": true,
       "blend_mtime": "2026-11-25T04:36:36+03:00",
       "blend_mtime_ts": 1795570596.3150172,
-      "png_mtime": null,
-      "png_mtime_ts": null,
-      "png_newer": null,
-      "preview_url": null,
+      "png_mtime": "2026-11-25T04:43:07+03:00",
+      "png_mtime_ts": 1795570987.834601,
+      "png_newer": true,
+      "preview_url": "previews/t6_pr1_1_cloth_vase.png",
       "note": "Сборка начата: файл сцены создан, рендера пока нет; спецификация T6_SPEC.md.",
       "agent": "builder-t6",
-      "warnings": [
-        "no_png"
-      ],
-      "png_size": null,
+      "warnings": [],
+      "png_size": 1227934,
       "blend_size": 14635432
     },
     {
@@ -508,17 +506,17 @@
       "status_source": "override",
       "has_blend": true,
       "has_png": true,
-      "blend_mtime": "2026-11-25T04:41:33+03:00",
-      "blend_mtime_ts": 1795570893.8250215,
-      "png_mtime": "2026-11-25T04:41:56+03:00",
-      "png_mtime_ts": 1795570916.8339455,
+      "blend_mtime": "2026-11-25T04:43:59+03:00",
+      "blend_mtime_ts": 1795571039.1754625,
+      "png_mtime": "2026-11-25T04:44:05+03:00",
+      "png_mtime_ts": 1795571045.0903983,
       "png_newer": true,
       "preview_url": "previews/t6_pr1_3_pillows.png",
       "note": "Собран: сцена и рендер есть, ждёт независимой проверки (PASS нет).",
       "agent": "builder-t6",
       "warnings": [],
-      "png_size": 882308,
-      "blend_size": 193239
+      "png_size": 883041,
+      "blend_size": 196102
     },
     {
       "id": "T6_PR1_4_POUF",
@@ -574,8 +572,8 @@
       "status_source": "override",
       "has_blend": true,
       "has_png": false,
-      "blend_mtime": "2026-11-25T04:42:33+03:00",
-      "blend_mtime_ts": 1795570953.4836066,
+      "blend_mtime": "2026-11-25T04:44:52+03:00",
+      "blend_mtime_ts": 1795571092.377384,
       "png_mtime": null,
       "png_mtime_ts": null,
       "png_newer": null,
@@ -586,7 +584,7 @@
         "no_png"
       ],
       "png_size": null,
-      "blend_size": 514408
+      "blend_size": 515229
     },
     {
       "id": "T6_PR2_2_PAPER_ANIMATION",
@@ -659,7 +657,7 @@
     "orphan_pngs": [],
     "unmatched_status_keys": []
   },
-  "generated_at": "2026-11-25T04:43:01+03:00",
-  "snapshot_at": "2026-11-25T04:43:01+03:00",
-  "content_hash": "b1934895ca1b6adb8ac01e4a1ce61a8d524b197f34cc0c2b8c85d2cfc1e8f4ac"
+  "generated_at": "2026-11-25T04:45:19+03:00",
+  "snapshot_at": "2026-11-25T04:45:19+03:00",
+  "content_hash": "5c4313097af8b559f58fefd75a21fa69e649bdc3c631e29e6b6b0313a3fd380f"
 }
