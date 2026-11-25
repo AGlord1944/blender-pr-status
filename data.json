@@ -2,9 +2,9 @@
   "ok": true,
   "mode": "snapshot",
   "summary": {
-    "total": 27,
+    "total": 28,
     "done": 18,
-    "in_progress": 8,
+    "in_progress": 9,
     "failed": 1,
     "missing": 0
   },
@@ -30,9 +30,9 @@
     {
       "name": "Тема 6",
       "number": 6,
-      "total": 8,
+      "total": 9,
       "done": 6,
-      "in_progress": 2,
+      "in_progress": 3,
       "failed": 0,
       "missing": 0
     }
@@ -97,8 +97,8 @@
       "status_source": "override",
       "has_blend": true,
       "has_png": false,
-      "blend_mtime": "2026-11-25T05:03:00+03:00",
-      "blend_mtime_ts": 1795572180.246101,
+      "blend_mtime": "2026-11-25T05:07:31+03:00",
+      "blend_mtime_ts": 1795572451.3483846,
       "png_mtime": null,
       "png_mtime_ts": null,
       "png_newer": null,
@@ -107,10 +107,11 @@
       "agent": "pr6-wave",
       "warnings": [
         "no_png",
+        "blend1",
         "temp_preview"
       ],
       "png_size": null,
-      "blend_size": 64466991
+      "blend_size": 64467092
     },
     {
       "id": "T4_PR2",
@@ -395,19 +396,17 @@
       "status": "in_progress",
       "status_source": "override",
       "has_blend": true,
-      "has_png": false,
+      "has_png": true,
       "blend_mtime": "2026-11-25T05:04:05+03:00",
       "blend_mtime_ts": 1795572245.2514143,
-      "png_mtime": null,
-      "png_mtime_ts": null,
-      "png_newer": null,
-      "preview_url": null,
+      "png_mtime": "2026-11-25T05:06:52+03:00",
+      "png_mtime_ts": 1795572412.1985095,
+      "png_newer": true,
+      "preview_url": "previews/t5_pr1_cat_v3.png",
       "note": "Третий проход по морде: свежая диагностика, глаза/зрачок/усы, новая версия v3; v2 не перезаписывается",
       "agent": "cat-v3",
-      "warnings": [
-        "no_png"
-      ],
-      "png_size": null,
+      "warnings": [],
+      "png_size": 1004810,
       "blend_size": 264581
     },
     {
@@ -497,6 +496,30 @@
       "warnings": [],
       "png_size": 883041,
       "blend_size": 196102
+    },
+    {
+      "id": "T6_PR1_3_PILLOWS",
+      "full_id": "T6_PR1_3_PILLOWS_V2",
+      "theme": "Тема 6",
+      "theme_number": 6,
+      "name": "PR1_3_Pillows_v2",
+      "status": "in_progress",
+      "status_source": "override",
+      "has_blend": true,
+      "has_png": false,
+      "blend_mtime": "2026-11-25T05:08:25+03:00",
+      "blend_mtime_ts": 1795572505.8521194,
+      "png_mtime": null,
+      "png_mtime_ts": null,
+      "png_newer": null,
+      "preview_url": null,
+      "note": "Собран: сцена и рендер есть, ждёт независимой проверки (PASS нет).",
+      "agent": "builder-t6",
+      "warnings": [
+        "no_png"
+      ],
+      "png_size": null,
+      "blend_size": 196874
     },
     {
       "id": "T6_PR2_1_BASKET",
@@ -679,7 +702,7 @@
     "orphan_pngs": [],
     "unmatched_status_keys": []
   },
-  "generated_at": "2026-11-25T05:05:16+03:00",
-  "snapshot_at": "2026-11-25T05:05:16+03:00",
-  "content_hash": "57abe88f6fe2604ab4e8725635b257502c346c7f3919df71e1630890459bec41"
+  "generated_at": "2026-11-25T05:09:44+03:00",
+  "snapshot_at": "2026-11-25T05:09:44+03:00",
+  "content_hash": "ff0332480b02129740864b8cca45876a123c40aa3ae4ea8944ad3fa1319e3c87"
 }
