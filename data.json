@@ -327,21 +327,20 @@
       "status": "failed",
       "status_source": "override",
       "has_blend": true,
-      "has_png": false,
-      "blend_mtime": "2026-11-25T04:34:28+03:00",
-      "blend_mtime_ts": 1795570468.9348972,
-      "png_mtime": null,
-      "png_mtime_ts": null,
-      "png_newer": null,
-      "preview_url": null,
+      "has_png": true,
+      "blend_mtime": "2026-11-25T04:34:53+03:00",
+      "blend_mtime_ts": 1795570493.5709026,
+      "png_mtime": "2026-11-25T04:35:28+03:00",
+      "png_mtime_ts": 1795570528.4108672,
+      "png_newer": true,
+      "preview_url": "previews/t5_pr1_cat_v2_fix.png",
       "note": "FAIL: зрачок-ромб 0.029×0.037 (h/w 1.29) и наклон глаза 6° вместо 15–29°; проверенная версия сохранена в reviewed/",
       "agent": "cat-fix",
       "warnings": [
-        "no_png",
         "blend1"
       ],
-      "png_size": null,
-      "blend_size": 264015
+      "png_size": 1005666,
+      "blend_size": 264577
     },
     {
       "id": "T5_PR1_CAT",
@@ -625,24 +624,22 @@
       "full_id": "T6_PR1_3_PILLOWS",
       "theme": "Тема 6",
       "theme_number": 6,
-      "name": "PR1_3_PILLOWS",
+      "name": "PR1_3_Pillows",
       "status": "missing",
       "status_source": "override",
-      "has_blend": false,
-      "has_png": false,
-      "blend_mtime": null,
-      "blend_mtime_ts": null,
-      "png_mtime": null,
-      "png_mtime_ts": null,
-      "png_newer": null,
-      "preview_url": null,
+      "has_blend": true,
+      "has_png": true,
+      "blend_mtime": "2026-11-25T04:35:32+03:00",
+      "blend_mtime_ts": 1795570532.3352096,
+      "png_mtime": "2026-11-25T04:35:37+03:00",
+      "png_mtime_ts": 1795570537.7519042,
+      "png_newer": true,
+      "preview_url": "previews/t6_pr1_3_pillows.png",
       "note": "Запланировано; файлов сцены и рендера в Тема 6 пока нет.",
       "agent": "spec",
-      "warnings": [
-        "no_files"
-      ],
-      "png_size": null,
-      "blend_size": null
+      "warnings": [],
+      "png_size": 882333,
+      "blend_size": 196347
     }
   ],
   "warnings": [],
@@ -667,7 +664,7 @@
     "orphan_pngs": [],
     "unmatched_status_keys": []
   },
-  "generated_at": "2026-11-25T04:34:38+03:00",
-  "snapshot_at": "2026-11-25T04:34:38+03:00",
-  "content_hash": "6440fb83a0c92633404a191096c910b5b131b622b60414094de331aa11a77927"
+  "generated_at": "2026-11-25T04:36:03+03:00",
+  "snapshot_at": "2026-11-25T04:36:03+03:00",
+  "content_hash": "6cd0d0925f43d93d692b5721df842825f93b03e2a53e636241d89285081ad63e"
 }
