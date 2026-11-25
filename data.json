@@ -259,9 +259,7 @@
       "preview_url": "previews/t5_pr1_cat.png",
       "note": "В работе, ожидает проверки.",
       "agent": null,
-      "warnings": [
-        "blend1"
-      ],
+      "warnings": [],
       "png_size": 994076,
       "blend_size": 258353
     },
@@ -354,7 +352,7 @@
     "orphan_pngs": [],
     "unmatched_status_keys": []
   },
-  "generated_at": "2026-11-25T03:08:58+03:00",
-  "snapshot_at": "2026-11-25T03:08:58+03:00",
-  "content_hash": "c17ba893db5a7a35413873ffb2fad9dc29742df69d7e29ba36850c42af2631c9"
+  "generated_at": "2026-11-25T03:11:57+03:00",
+  "snapshot_at": "2026-11-25T03:11:57+03:00",
+  "content_hash": "1e168bb1c57683aff699c9f6f12e0e7fe3cf1de87c1e716fbabc51c5a1a97ea1"
 }
