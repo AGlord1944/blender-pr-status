@@ -97,8 +97,8 @@
       "status_source": "override",
       "has_blend": true,
       "has_png": false,
-      "blend_mtime": "2026-11-25T05:27:00+03:00",
-      "blend_mtime_ts": 1795573620.7972214,
+      "blend_mtime": "2026-11-25T05:29:48+03:00",
+      "blend_mtime_ts": 1795573788.0758662,
       "png_mtime": null,
       "png_mtime_ts": null,
       "png_newer": null,
@@ -111,7 +111,7 @@
         "temp_preview"
       ],
       "png_size": null,
-      "blend_size": 64803684
+      "blend_size": 64800856
     },
     {
       "id": "T4_PR2",
@@ -700,7 +700,7 @@
     "orphan_pngs": [],
     "unmatched_status_keys": []
   },
-  "generated_at": "2026-11-25T05:27:25+03:00",
-  "snapshot_at": "2026-11-25T05:27:25+03:00",
-  "content_hash": "ef16519dd3cb18582d7476df6a8def8d852787a2a1f10253d0aa1e4f94d01d46"
+  "generated_at": "2026-11-25T05:30:43+03:00",
+  "snapshot_at": "2026-11-25T05:30:43+03:00",
+  "content_hash": "07a45ad9f07fa8f59c70a0f8a75b73f712537bc4002d414b13db8d031252cd8c"
 }
