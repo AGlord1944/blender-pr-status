@@ -251,19 +251,20 @@
       "status_source": "override",
       "has_blend": true,
       "has_png": true,
-      "blend_mtime": "2026-11-25T03:33:37+03:00",
-      "blend_mtime_ts": 1795566817.4247823,
-      "png_mtime": "2026-11-25T03:34:03+03:00",
-      "png_mtime_ts": 1795566843.1865654,
-      "png_newer": true,
+      "blend_mtime": "2026-11-25T03:35:50+03:00",
+      "blend_mtime_ts": 1795566950.7689865,
+      "png_mtime": "2026-11-25T03:35:26+03:00",
+      "png_mtime_ts": 1795566926.5968072,
+      "png_newer": false,
       "preview_url": "previews/t5_pr1_cat.png",
       "note": "В работе, ожидает проверки.",
       "agent": null,
       "warnings": [
+        "png_older",
         "blend1"
       ],
-      "png_size": 1008249,
-      "blend_size": 258452
+      "png_size": 1009035,
+      "blend_size": 258451
     },
     {
       "id": "T5_PR1_SKIRTING",
@@ -354,7 +355,7 @@
     "orphan_pngs": [],
     "unmatched_status_keys": []
   },
-  "generated_at": "2026-11-25T03:34:04+03:00",
-  "snapshot_at": "2026-11-25T03:34:04+03:00",
-  "content_hash": "44663aa1f99dec33bdf2379783469218ce5bba4c1e7c63b8e0df8279dab137f5"
+  "generated_at": "2026-11-25T03:36:02+03:00",
+  "snapshot_at": "2026-11-25T03:36:02+03:00",
+  "content_hash": "6a5ba76e78b2cfdf1ce0fb8ede30c6230835eba5a83e024819ad7155095e80bd"
 }
